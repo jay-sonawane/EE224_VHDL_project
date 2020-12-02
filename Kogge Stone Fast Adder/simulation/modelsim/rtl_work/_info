@@ -1,0 +1,380 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/quartus projects/Kogge Stone Fast Adder/simulation/modelsim
+Eandgate
+Z1 w1606923603
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z4 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd
+Z5 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd
+l0
+L5 1
+VKJIzIZ42ek95bf=4<e84B0
+!s100 eLZh10PHf1iiMg2:kYeQc2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1606929196
+!i10b 1
+Z8 !s108 1606929196.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd|
+Z10 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+DEx4 work 7 andgate 0 22 KJIzIZ42ek95bf=4<e84B0
+!i122 4
+l13
+Z13 L11 15
+VUcT2hJ:jWgRQl:o]AF]V03
+!s100 3hJ5cM`JoHmfdl4>X]mbN1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Egp_generator
+Z14 w1606929158
+R2
+R3
+!i122 3
+R0
+Z15 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd
+Z16 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd
+l0
+L5 1
+V_1PQzC4H[gdH4Cf3P9@XO0
+!s100 UYUcoW]9l0R_JbIAV9]^F2
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd|
+Z18 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 12 gp_generator 0 22 _1PQzC4H[gdH4Cf3P9@XO0
+!i122 3
+l25
+L11 21
+VX6mYJ:XGziHdCQ[T@1F7A2
+!s100 9?TZ17CT5;YJf?Ci70zJ71
+R6
+31
+R7
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Egpcell
+Z19 w1606924799
+R2
+R3
+!i122 1
+R0
+Z20 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd
+Z21 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd
+l0
+L5 1
+VOOlSi6iMgD1kYlF:60K:Y3
+!s100 ]9ghH[Vd5eQHoE5zjl3Bz3
+R6
+31
+R7
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd|
+Z23 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 6 gpcell 0 22 OOlSi6iMgD1kYlF:60K:Y3
+!i122 1
+l28
+L11 26
+V3_5XDK0d=UeooaO3lJHzE3
+!s100 @ZF:bHlF0MbWG_@98V<h_3
+R6
+31
+R7
+!i10b 1
+R8
+R22
+R23
+!i113 1
+R11
+R12
+Ekoggestonefastadder
+Z24 w1606928889
+R2
+R3
+!i122 0
+R0
+Z25 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
+Z26 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
+l0
+L5 1
+VN3jm3:C0b:HOAY0;36[_X3
+!s100 cLeMV2cg3zR998i:GR57L3
+R6
+31
+R7
+!i10b 1
+R8
+Z27 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
+Z28 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 19 koggestonefastadder 0 22 N3jm3:C0b:HOAY0;36[_X3
+!i122 0
+l43
+L11 133
+VhkCDNdS9^NcVHQgG>Q>`U3
+!s100 oX1o_<9[EgCH8zicYP=]Y2
+R6
+31
+R7
+!i10b 1
+R8
+R27
+R28
+!i113 1
+R11
+R12
+Enotgate
+Z29 w1606923621
+R2
+R3
+!i122 5
+R0
+Z30 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd
+Z31 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd
+l0
+L5 1
+Vn21UYzMaXd5T5MkGDY8:_0
+!s100 Az64_Ni1z6]EYR@];]0:01
+R6
+31
+Z32 !s110 1606929197
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd|
+Z34 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 7 notgate 0 22 n21UYzMaXd5T5MkGDY8:_0
+!i122 5
+l13
+R13
+V7<L<<2V8N?mFM;_B@OPPk2
+!s100 f;04Yh1DcVShY5_KD?Fd32
+R6
+31
+R32
+!i10b 1
+R8
+R33
+R34
+!i113 1
+R11
+R12
+Eorgate
+Z35 w1606923640
+R2
+R3
+!i122 6
+R0
+Z36 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd
+Z37 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd
+l0
+L5 1
+VXg_B?aK^HTBOMg]WaHCkn3
+!s100 Dn[mQQ1nJ1daOF0<icUMM0
+R6
+31
+R32
+!i10b 1
+Z38 !s108 1606929197.000000
+Z39 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd|
+Z40 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 6 orgate 0 22 Xg_B?aK^HTBOMg]WaHCkn3
+!i122 6
+l13
+R13
+V@Qi0=NZ<U2RAABdzg;VKD1
+!s100 BDZo]kRV3m1jecdz<HN]]1
+R6
+31
+R32
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Esumcarrygenerator
+Z41 w1606928290
+R2
+R3
+!i122 2
+R0
+Z42 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd
+Z43 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd
+l0
+L5 1
+VhUWeWD3_94Hnzgih3YS3a0
+!s100 NW5YmiJ1EkFh[;KMiASAC1
+R6
+31
+R7
+!i10b 1
+R8
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
+Z45 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 17 sumcarrygenerator 0 22 hUWeWD3_94Hnzgih3YS3a0
+!i122 2
+l34
+L11 29
+V?<nmN3i`_>ERZ:I;[N?D_0
+!s100 dVI=PkIe33znG@l8;Bico2
+R6
+31
+R7
+!i10b 1
+R8
+R44
+R45
+!i113 1
+R11
+R12
+Etestbench
+Z46 w1606924730
+R2
+R3
+!i122 8
+R0
+Z47 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd
+Z48 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd
+l0
+L4 1
+V?;3E9R?=9NO@>;;RGnNL=3
+!s100 zV?DSKOdjRnaRgmTS>F@00
+R6
+31
+R32
+!i10b 1
+R38
+Z49 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
+!s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
+!i113 1
+R11
+R12
+Atb
+R2
+R3
+DEx4 work 9 testbench 0 22 ?;3E9R?=9NO@>;;RGnNL=3
+!i122 8
+l18
+L7 36
+VTWTO=60mnUkRllL?z9OKU0
+!s100 92[?g=c^<KUW5D33nWDCA3
+R6
+31
+R32
+!i10b 1
+R38
+R49
+Z50 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
+!i113 1
+R11
+R12
+Exorgate
+Z51 w1606923662
+R2
+R3
+!i122 7
+R0
+Z52 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd
+Z53 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd
+l0
+L5 1
+VK23CSd`H4RV0^:3WY?:XF0
+!s100 ^3iP?M2G<Q``@Oz8G:00?0
+R6
+31
+R32
+!i10b 1
+R38
+Z54 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd|
+Z55 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 7 xorgate 0 22 K23CSd`H4RV0^:3WY?:XF0
+!i122 7
+l34
+L11 36
+VG;G47^gRQnf1i:YhUcTXi3
+!s100 O;60@]M]Mh9G^AVLihdSm3
+R6
+31
+R32
+!i10b 1
+R38
+R54
+R55
+!i113 1
+R11
+R12

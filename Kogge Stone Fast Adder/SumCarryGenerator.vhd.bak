@@ -1,0 +1,40 @@
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity SumCarrygenerator is
+Port (GP : in bit_vector(0 to 1);
+		C_in,c,p : in bit;
+		S,C_out : out bit);
+end SumCarryGenerator;
+
+architecture Structural of SumCarryGenerator is
+
+--add component AND Gate
+component andGate
+port(Input0,Input1:in bit;
+	  Output  :out bit);
+end component;
+
+--add component XOR Gate
+component XORGate
+port(Input0,Input1:in bit;
+	  Output  :out bit);
+end component;
+
+--add component OR Gate
+component orGate
+port(Input0,Input1:in bit;
+	  Output  :out bit);
+end component;
+
+--Define temporary signal
+signal temp1: bit;
+
+begin
+
+C_inP_i_0 : andGate port map(C_in,GP(0),temp1);
+Carry_out  : orGate port map(GP(1),temp1,C_out);
+Sum        : XORgate port map(c,p,s);
+
+end Structural;

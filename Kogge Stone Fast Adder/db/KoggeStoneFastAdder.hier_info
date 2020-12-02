@@ -1,0 +1,2960 @@
+|KoggeStoneFastAdder
+Input0[15] => GP_Generator:GP_15_15.GPinput1
+Input0[14] => GP_Generator:GP_14_14.GPinput1
+Input0[13] => GP_Generator:GP_13_13.GPinput1
+Input0[12] => GP_Generator:GP_12_12.GPinput1
+Input0[11] => GP_Generator:GP_11_11.GPinput1
+Input0[10] => GP_Generator:GP_10_10.GPinput1
+Input0[9] => GP_Generator:GP_9_9.GPinput1
+Input0[8] => GP_Generator:GP_8_8.GPinput1
+Input0[7] => GP_Generator:GP_7_7.GPinput1
+Input0[6] => GP_Generator:GP_6_6.GPinput1
+Input0[5] => GP_Generator:GP_5_5.GPinput1
+Input0[4] => GP_Generator:GP_4_4.GPinput1
+Input0[3] => GP_Generator:GP_3_3.GPinput1
+Input0[2] => GP_Generator:GP_2_2.GPinput1
+Input0[1] => GP_Generator:GP_1_1.GPinput1
+Input0[0] => GP_Generator:GP_0_0.GPinput1
+Input1[15] => GP_Generator:GP_15_15.GPinput2
+Input1[14] => GP_Generator:GP_14_14.GPinput2
+Input1[13] => GP_Generator:GP_13_13.GPinput2
+Input1[12] => GP_Generator:GP_12_12.GPinput2
+Input1[11] => GP_Generator:GP_11_11.GPinput2
+Input1[10] => GP_Generator:GP_10_10.GPinput2
+Input1[9] => GP_Generator:GP_9_9.GPinput2
+Input1[8] => GP_Generator:GP_8_8.GPinput2
+Input1[7] => GP_Generator:GP_7_7.GPinput2
+Input1[6] => GP_Generator:GP_6_6.GPinput2
+Input1[5] => GP_Generator:GP_5_5.GPinput2
+Input1[4] => GP_Generator:GP_4_4.GPinput2
+Input1[3] => GP_Generator:GP_3_3.GPinput2
+Input1[2] => GP_Generator:GP_2_2.GPinput2
+Input1[1] => GP_Generator:GP_1_1.GPinput2
+Input1[0] => GP_Generator:GP_0_0.GPinput2
+Sum[15] <= SumCarrygenerator:sum_carry_15.S
+Sum[14] <= SumCarrygenerator:sum_carry_14.S
+Sum[13] <= SumCarrygenerator:sum_carry_13.S
+Sum[12] <= SumCarrygenerator:sum_carry_12.S
+Sum[11] <= SumCarrygenerator:sum_carry_11.S
+Sum[10] <= SumCarrygenerator:sum_carry_10.S
+Sum[9] <= SumCarrygenerator:sum_carry_9.S
+Sum[8] <= SumCarrygenerator:sum_carry_8.S
+Sum[7] <= SumCarrygenerator:sum_carry_7.S
+Sum[6] <= SumCarrygenerator:sum_carry_6.S
+Sum[5] <= SumCarrygenerator:sum_carry_5.S
+Sum[4] <= SumCarrygenerator:sum_carry_4.S
+Sum[3] <= SumCarrygenerator:sum_carry_3.S
+Sum[2] <= SumCarrygenerator:sum_carry_2.S
+Sum[1] <= SumCarrygenerator:sum_carry_1.S
+Sum[0] <= SumCarrygenerator:sum_carry_0.S
+Carry_Output <= SumCarrygenerator:sum_carry_15.C_out
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_1_1|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_2_2|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_5_5|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_9_9|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_11_11|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15
+GPinput1 => andGate:G.Input0
+GPinput1 => XORGate:P.Input0
+GPinput2 => andGate:G.Input1
+GPinput2 => XORGate:P.Input1
+GPoutput[1] <= andGate:G.Output
+GPoutput[0] <= XORGate:P.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|andGate:G
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_1_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_1_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_1_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_1_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_1
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_1|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_1|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_1|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_2
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_2|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_2|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_2|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_3
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_3|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_3|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_3|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_4
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_4|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_4|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_4|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_5
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_5|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_5|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_5|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_6
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_6|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_6|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_6|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_7
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_7|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_7|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_7|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_8
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_8|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_8|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_8|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_9
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_9|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_9|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_9|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_10
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_10|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_10|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_10|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_11
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_11|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_11|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_11|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_12
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_12|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_12|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_12|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_13
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_13|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_13|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_13|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_14
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_14|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_14|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_14|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_2_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_3_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_1
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_1|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_1|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_1|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_2
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_2|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_2|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_2|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_3
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_3|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_3|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_3|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_4
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_4|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_4|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_4|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_5
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_5|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_5|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_5|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_6
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_6|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_6|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_6|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_7
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_7|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_7|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_7|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_8
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_8|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_8|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_8|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_9
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_9|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_9|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_9|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_10
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_10|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_10|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_10|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_11
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_11|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_11|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_11|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_12
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_12|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_12|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_12|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_4_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_5_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_6_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_7_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_1
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_1|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_1|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_1|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_2
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_2|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_2|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_2|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_3
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_3|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_3|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_3|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_4
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_4|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_4|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_4|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_5
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_5|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_5|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_5|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_6
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_6|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_6|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_6|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_7
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_7|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_7|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_7|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_8
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_8|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_8|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_8|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_8_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_9_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_10_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_11_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_12_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_13_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_14_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_0
+GPinput1[1] => orGate:G_i_k.Input0
+GPinput1[0] => andGate:P_i_jG_jMinus1_k.Input0
+GPinput1[0] => andGate:P_i_k.Input0
+GPinput2[1] => andGate:P_i_jG_jMinus1_k.Input1
+GPinput2[0] => andGate:P_i_k.Input1
+GPoutput[1] <= orGate:G_i_k.Output
+GPoutput[0] <= andGate:P_i_k.Output
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_0|andGate:P_i_jG_jMinus1_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_0|orGate:G_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|GPcell:GP_15_0|andGate:P_i_k
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15
+GP[1] => C_out.DATAIN
+GP[0] => ~NO_FANOUT~
+c => XORGate:Sum.Input0
+p => XORGate:Sum.Input1
+S <= XORGate:Sum.Output
+C_out <= GP[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum
+Input0 => notGate:I0_bar.Input
+Input0 => andGate:I0I1_bar.Input0
+Input1 => notGate:I1_bar.Input
+Input1 => andGate:I0_barI1.Input1
+Output <= orGate:Output_xor.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|notGate:I0_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|notGate:I1_bar
+Input => Output.DATAIN
+Output <= Input.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|andGate:I0I1_bar
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|andGate:I0_barI1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|orGate:Output_xor
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+

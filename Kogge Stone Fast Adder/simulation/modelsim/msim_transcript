@@ -1,0 +1,137 @@
+# Reading pref.tcl
+# do KoggeStoneFastAdder_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity KoggeStoneFastAdder
+# -- Compiling architecture Structural of KoggeStoneFastAdder
+# End time: 22:43:16 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GPcell
+# -- Compiling architecture Structural of GPcell
+# End time: 22:43:16 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SumCarrygenerator
+# -- Compiling architecture Structural of SumCarryGenerator
+# End time: 22:43:16 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GP_Generator
+# -- Compiling architecture Structural of GP_Generator
+# End time: 22:43:16 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity andGate
+# -- Compiling architecture Behavioral of andGate
+# End time: 22:43:16 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:16 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity notGate
+# -- Compiling architecture Behavioral of notGate
+# End time: 22:43:17 on Dec 02,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:17 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity orGate
+# -- Compiling architecture Behavioral of orGate
+# End time: 22:43:17 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:17 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity XORGate
+# -- Compiling architecture Structural of XORGate
+# End time: 22:43:17 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 22:43:17 on Dec 02,2020
+# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench
+# -- Compiling architecture tb of testbench
+# End time: 22:43:17 on Dec 02,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 22:43:19 on Dec 02,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(tb)
+# Loading work.koggestonefastadder(structural)
+# Loading work.gp_generator(structural)
+# Loading work.andgate(behavioral)
+# Loading work.xorgate(structural)
+# Loading work.notgate(behavioral)
+# Loading work.orgate(behavioral)
+# Loading work.gpcell(structural)
+# Loading work.sumcarrygenerator(structural)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 50 ns
+# End time: 22:43:32 on Dec 02,2020, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0

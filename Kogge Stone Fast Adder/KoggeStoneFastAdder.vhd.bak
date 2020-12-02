@@ -1,0 +1,144 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+--define entity KoggeStoneFastAdder
+entity KoggeStoneFastAdder is 
+    Port( Input0,Input1: in bit_vector(0 to 15);
+			 C_in          : in bit;
+          Sum	 		  : out bit_vector(0 to 15);
+			 Carry_Output : out bit);
+end KoggeStoneFastAdder;
+
+architecture Structural of KoggeStoneFastAdder is
+
+--add component GP_Generator
+component GP_Generator
+Port( Input0,Input1  : in bit;
+          GP	 		: out bit_vector(0 to 1));
+end component;
+
+--add component GPcell
+component GPcell
+Port( GPinput1,GPinput2 : in bit_vector(0 to 1);--GPinput1 = (G[i,j],P[i,j]) , GPinput2 = (G[j-1,k],P[j-1,k])
+          GPoutput	   : out bit_vector(0 to 1));--Gpoutput = (G[i,k],P[i,k])
+end component;
+
+--add component SumCarrygenerator
+component SumCarrygenerator
+Port( GP : in bit_vector(0 to 1);
+		C_in,c,p : in bit;
+		S,C_out : out bit);
+end component;
+
+--Define GP[i:j] signals
+
+signal GP0_0,GP1_1,GP2_2,GP3_3,GP4_4,GP5_5,GP6_6,GP7_7,GP8_8,GP9_9,GP10_10,GP11_11,GP12_12,GP13_13,GP14_14,GP15_15: bit_vector(1 downto 0);--Stage 0 GP
+signal GP1_0,GP2_1,GP3_2,GP4_3,GP5_4,GP6_5,GP7_6,GP8_7,GP9_8,GP10_9,GP11_10,GP12_11,GP13_12,GP14_13,GP15_14      : bit_vector(1 downto 0);--Stage 1 GP
+signal GP2_0,GP3_0,GP4_1,GP5_2,GP6_3,GP7_4,GP8_5,GP9_6,GP10_7,GP11_8,GP12_9,GP13_10,GP14_11,GP15_12               : bit_vector(1 downto 0);--Stage 2 GP
+signal GP4_0,GP5_0,GP6_0,GP7_0,GP8_1,GP9_2,GP10_3,GP11_4,GP12_5,GP13_6,GP14_7,GP15_8                              : bit_vector(1 downto 0);--Stage 3 GP
+signal GP8_0,GP9_0,GP10_0,GP11_0,GP12_0,GP13_0,GP14_0,GP15_0																		: bit_vector(1 downto 0);--Stage 4 GP
+
+--define carry
+signal c : bit_vector(0 to 15);
+
+begin
+	
+--Stage 0
+
+GP_0_0  : GP_Generator port map(Input0(0),Input1(0),GP0_0);
+GP_1_1  : GP_Generator port map(Input0(1),Input1(1),GP1_1);
+GP_2_2  : GP_Generator port map(Input0(2),Input1(2),GP2_2);
+GP_3_3  : GP_Generator port map(Input0(3),Input1(3),GP3_3);
+GP_4_4  : GP_Generator port map(Input0(4),Input1(4),GP4_4);
+GP_5_5  : GP_Generator port map(Input0(5),Input1(5),GP5_5);
+GP_6_6  : GP_Generator port map(Input0(6),Input1(6),GP6_6);
+GP_7_7  : GP_Generator port map(Input0(7),Input1(7),GP7_7);
+GP_8_8  : Gp_Generator port map(Input0(8),Input1(8),GP8_8);
+GP_9_9  : GP_Generator port map(Input0(9),Input1(9),GP9_9);
+GP_10_10: GP_Generator port map(Input0(10),Input1(10),GP10_10);
+GP_11_11: GP_Generator port map(Input0(11),Input1(11),GP11_11);
+GP_12_12: GP_Generator port map(Input0(12),Input1(12),GP12_12);
+GP_13_13: GP_Generator port map(Input0(13),Input1(13),GP13_13);
+GP_14_14: GP_Generator port map(Input0(14),Input1(14),GP14_14);
+GP_15_15: GP_Generator port map(Input0(15),Input1(15),GP15_15);
+
+		
+--Stage 1
+
+GP_1_0  : GPcell port map(GP1_1,GP0_0,GP1_0);
+GP_2_1  : GPcell port map(GP2_2,GP1_1,GP2_1);
+GP_3_2  : GPcell port map(GP3_3,GP2_2,GP3_2);
+GP_4_3  : GPcell port map(GP4_4,GP3_3,GP4_3);
+GP_5_4  : GPcell port map(GP5_5,GP4_4,GP5_4);
+GP_6_5  : GPcell port map(GP6_6,GP5_5,GP6_5);
+GP_7_6  : GPcell port map(GP7_7,GP6_6,GP7_6);
+GP_8_7  : GPcell port map(GP8_8,GP7_7,GP8_7);
+GP_9_8  : GPcell port map(GP9_9,GP8_8,GP9_8);
+GP_10_9 : GPcell port map(GP10_10,GP9_9,GP10_9);
+GP_11_10: GPcell port map(GP11_11,GP10_10,GP11_10);
+GP_12_11: GPcell port map(GP12_12,GP11_11,GP12_11);
+GP_13_12: GPcell port map(GP13_13,GP12_12,GP13_12);
+GP_14_13: GPcell port map(GP14_14,GP13_13,GP14_13);
+GP_15_14: GPcell port map(GP15_15,GP14_14,GP15_14);
+
+--Stage 2
+
+GP_2_0  : GPcell port map(GP2_1,GP0_0,GP2_0);
+GP_3_0  : GPcell port map(GP3_2,GP1_0,GP3_0);
+GP_4_1  : GPcell port map(GP4_3,GP2_1,GP4_1);
+GP_5_2  : GPcell port map(GP5_4,GP3_2,GP5_2);
+GP_6_3  : GPcell port map(GP6_5,GP4_3,GP6_3);
+GP_7_4  : GPcell port map(GP7_6,GP5_4,GP7_4);
+GP_8_5  : GPcell port map(GP8_7,GP6_5,GP8_5);
+GP_9_6  : GPcell port map(GP9_8,GP7_6,GP9_6);
+GP_10_7 : GPcell port map(GP10_9,GP8_7,GP10_7);
+GP_11_8 : GPcell port map(GP11_10,GP9_8,GP11_8);
+GP_12_9 : GPcell port map(GP12_11,GP10_9,GP12_9);
+GP_13_10: GPcell port map(GP13_12,GP11_10,GP13_10);
+GP_14_11: GPcell port map(GP14_13,GP12_11,GP14_11);
+GP_15_12: GPcell port map(GP15_14,GP13_12,GP15_12);
+
+--Stage 3
+
+GP_4_0  : GPcell port map(GP4_1,GP0_0,GP4_0);
+GP_5_0  : GPcell port map(GP5_2,GP1_0,GP5_0);
+GP_6_0  : GPcell port map(GP6_3,GP2_0,GP6_0);
+GP_7_0  : GPcell port map(GP7_4,GP3_0,GP7_0);
+GP_8_1  : GPcell port map(GP8_5,GP4_1,GP8_1);
+GP_9_2  : GPcell port map(GP9_6,GP5_2,GP9_2);
+GP_10_3 : GPcell port map(GP10_7,GP6_3,GP10_3);
+GP_11_4 : GPcell port map(GP11_8,GP7_4,GP11_4);
+GP_12_5 : GPcell port map(GP12_9,GP8_5,GP12_5);
+GP_13_6 : GPcell port map(GP13_10,GP9_6,GP13_6);
+GP_14_7 : GPcell port map(GP14_11,GP10_7,GP14_7);
+GP_15_8 : GPcell port map(GP15_12,GP11_8,GP15_8);
+
+--Stage 4
+
+GP_8_0  : GPcell port map(GP7_0,GP0_0,GP8_0);
+GP_9_0  : GPcell port map(GP9_2,GP1_0,GP9_0);
+GP_10_0 : GPcell port map(GP10_3,GP2_0,GP10_0);
+GP_11_0 : GPcell port map(GP11_4,GP3_0,GP11_0);
+GP_12_0 : GPcell port map(GP12_5,GP4_0,GP12_0);
+GP_13_0 : GPcell port map(GP13_6,GP5_0,GP13_0);
+GP_14_0 : GPcell port map(GP14_7,GP6_0,GP14_0);
+GP_15_0 : GPcell port map(GP15_8,GP7_0,GP15_0);
+
+sum_carry_0  : SumCarrygenerator port map(GP=>GP0_0,C_in=>C_in,c=>C_in,p=>GP0_0(0),S=>Sum(0),C_out=>c(0));
+sum_carry_1  : SumCarrygenerator port map(GP=>GP1_0,C_in=>C_in,c=>c(0),p=>GP1_1(0),S=>Sum(1),C_out=>c(1));
+sum_carry_2  : SumCarrygenerator port map(GP=>GP2_0,C_in=>C_in,c=>c(1),p=>GP2_2(0),S=>Sum(2),C_out=>c(2));
+sum_carry_3  : SumCarrygenerator port map(GP=>GP3_0,C_in=>C_in,c=>c(2),p=>GP3_3(0),S=>Sum(3),C_out=>c(3));
+sum_carry_4  : SumCarrygenerator port map(GP=>GP4_0,C_in=>C_in,c=>c(3),p=>GP4_4(0),S=>Sum(4),C_out=>c(4));
+sum_carry_5  : SumCarrygenerator port map(GP=>GP5_0,C_in=>C_in,c=>c(4),p=>GP5_5(0),S=>Sum(5),C_out=>c(5));
+sum_carry_6  : SumCarrygenerator port map(GP=>GP6_0,C_in=>C_in,c=>c(5),p=>GP6_6(0),S=>Sum(6),C_out=>c(6));
+sum_carry_7  : SumCarrygenerator port map(GP=>GP7_0,C_in=>C_in,c=>c(6),p=>GP7_7(0),S=>Sum(7),C_out=>c(7));
+sum_carry_8  : SumCarrygenerator port map(GP=>GP8_0,C_in=>C_in,c=>c(7),p=>GP8_8(0),S=>Sum(8),C_out=>c(8));
+sum_carry_9  : SumCarrygenerator port map(GP=>GP9_0,C_in=>C_in,c=>c(8),p=>GP9_9(0),S=>Sum(9),C_out=>c(9));
+sum_carry_10 : SumCarrygenerator port map(GP=>GP10_0,C_in=>C_in,c=>c(9),p=>GP10_10(0),S=>Sum(10),C_out=>c(10));
+sum_carry_11 : SumCarrygenerator port map(GP=>GP11_0,C_in=>C_in,c=>c(10),p=>GP12_11(0),S=>Sum(11),C_out=>c(11));
+sum_carry_12 : SumCarrygenerator port map(GP=>GP12_0,C_in=>C_in,c=>c(11),p=>GP12_12(0),S=>Sum(12),C_out=>c(12));
+sum_carry_13 : SumCarrygenerator port map(GP=>GP13_0,C_in=>C_in,c=>c(12),p=>GP13_13(0),S=>Sum(13),C_out=>c(13));
+sum_carry_14 : SumCarrygenerator port map(GP=>GP14_0,C_in=>C_in,c=>c(13),p=>GP14_14(0),S=>Sum(14),C_out=>c(14));
+sum_carry_15 : SumCarrygenerator port map(GP=>GP15_0,C_in=>C_in,c=>c(14),p=>GP15_15(0),S=>Sum(15),C_out=>Carry_Output);
+
+end Structural;
