@@ -72,6 +72,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "Carry_in",
+					"strict" : false
+				},
+				{
 					"name" : "Input0[0]",
 					"strict" : false
 				},

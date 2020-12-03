@@ -47,6 +47,23 @@ Sum[12] << SumCarrygenerator:sum_carry_12.S
 Sum[13] << SumCarrygenerator:sum_carry_13.S
 Sum[14] << SumCarrygenerator:sum_carry_14.S
 Sum[15] << SumCarrygenerator:sum_carry_15.S
+Carry_in => SumCarrygenerator:sum_carry_0.c
+Carry_in => SumCarrygenerator:sum_carry_0.C_in
+Carry_in => SumCarrygenerator:sum_carry_1.C_in
+Carry_in => SumCarrygenerator:sum_carry_2.C_in
+Carry_in => SumCarrygenerator:sum_carry_3.C_in
+Carry_in => SumCarrygenerator:sum_carry_4.C_in
+Carry_in => SumCarrygenerator:sum_carry_5.C_in
+Carry_in => SumCarrygenerator:sum_carry_6.C_in
+Carry_in => SumCarrygenerator:sum_carry_7.C_in
+Carry_in => SumCarrygenerator:sum_carry_8.C_in
+Carry_in => SumCarrygenerator:sum_carry_9.C_in
+Carry_in => SumCarrygenerator:sum_carry_10.C_in
+Carry_in => SumCarrygenerator:sum_carry_11.C_in
+Carry_in => SumCarrygenerator:sum_carry_12.C_in
+Carry_in => SumCarrygenerator:sum_carry_13.C_in
+Carry_in => SumCarrygenerator:sum_carry_14.C_in
+Carry_in => SumCarrygenerator:sum_carry_15.C_in
 Carry_Output << SumCarrygenerator:sum_carry_15.C_out
 
 
@@ -2239,12 +2256,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_0|XORGate:Sum
@@ -2284,12 +2314,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum
@@ -2329,12 +2372,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_2|XORGate:Sum
@@ -2374,12 +2430,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_3|XORGate:Sum
@@ -2419,12 +2488,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_4|XORGate:Sum
@@ -2464,12 +2546,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_5|XORGate:Sum
@@ -2509,12 +2604,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_6|XORGate:Sum
@@ -2554,12 +2662,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_7|XORGate:Sum
@@ -2599,12 +2720,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum
@@ -2644,12 +2778,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum
@@ -2689,12 +2836,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum
@@ -2734,12 +2894,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum
@@ -2779,12 +2952,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum
@@ -2824,12 +3010,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum
@@ -2869,12 +3068,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum
@@ -2914,12 +3126,25 @@ Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15
-GP[0] => C_out.DATAIN
-GP[1] => ~NO_FANOUT~
+GP[0] => orGate:Carry_out.Input0
+GP[1] => andGate:temp_1.Input1
 c => XORGate:Sum.Input0
 p => XORGate:Sum.Input1
+C_in => andGate:temp_1.Input0
 S <= XORGate:Sum.Output
-C_out <= GP[0].DB_MAX_OUTPUT_PORT_TYPE
+C_out <= orGate:Carry_out.Output
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|andGate:temp_1
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|orGate:Carry_out
+Input0 => process_0.IN0
+Input1 => process_0.IN1
+Output <= process_0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum

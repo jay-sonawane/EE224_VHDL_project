@@ -5,6 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity KoggeStoneFastAdder is 
     Port( Input0,Input1: in bit_vector(15 downto 0);
           Sum	 		  : out bit_vector(15 downto 0);
+			 Carry_in     : in bit;
 			 Carry_Output : out bit);
 end KoggeStoneFastAdder;
 
@@ -24,9 +25,9 @@ end component;
 
 --add component SumCarrygenerator
 component SumCarrygenerator
-Port( GP : in bit_vector(1 downto 0);
-		c,p : in bit;
-		S,C_out : out bit);
+Port( GP       : in bit_vector(1 downto 0);
+		c,p,C_in : in bit;
+		S,C_out  : out bit);
 end component;
 
 --Define GP[i:j] signals
@@ -123,21 +124,21 @@ GP_13_0 : GPcell port map(GPinput1=>GP13_6,GPinput2=>GP5_0,GPoutput=>GP13_0);
 GP_14_0 : GPcell port map(GPinput1=>GP14_7,GPinput2=>GP6_0,GPoutput=>GP14_0);
 GP_15_0 : GPcell port map(GPinput1=>GP15_8,GPinput2=>GP7_0,GPoutput=>GP15_0);
 
-sum_carry_0  : SumCarrygenerator port map(GP=>GP0_0 ,c=>'0'  ,p=>GP0_0(1)  ,S=>Sum(0) ,C_out=>c(0));
-sum_carry_1  : SumCarrygenerator port map(GP=>GP1_0 ,c=>c(0) ,p=>GP1_1(1)  ,S=>Sum(1) ,C_out=>c(1));
-sum_carry_2  : SumCarrygenerator port map(GP=>GP2_0 ,c=>c(1) ,p=>GP2_2(1)  ,S=>Sum(2) ,C_out=>c(2));
-sum_carry_3  : SumCarrygenerator port map(GP=>GP3_0 ,c=>c(2) ,p=>GP3_3(1)  ,S=>Sum(3) ,C_out=>c(3));
-sum_carry_4  : SumCarrygenerator port map(GP=>GP4_0 ,c=>c(3) ,p=>GP4_4(1)  ,S=>Sum(4) ,C_out=>c(4));
-sum_carry_5  : SumCarrygenerator port map(GP=>GP5_0 ,c=>c(4) ,p=>GP5_5(1)  ,S=>Sum(5) ,C_out=>c(5));
-sum_carry_6  : SumCarrygenerator port map(GP=>GP6_0 ,c=>c(5) ,p=>GP6_6(1)  ,S=>Sum(6) ,C_out=>c(6));
-sum_carry_7  : SumCarrygenerator port map(GP=>GP7_0 ,c=>c(6) ,p=>GP7_7(1)  ,S=>Sum(7) ,C_out=>c(7));
-sum_carry_8  : SumCarrygenerator port map(GP=>GP8_0 ,c=>c(7) ,p=>GP8_8(1)  ,S=>Sum(8) ,C_out=>c(8));
-sum_carry_9  : SumCarrygenerator port map(GP=>GP9_0 ,c=>c(8) ,p=>GP9_9(1)  ,S=>Sum(9) ,C_out=>c(9));
-sum_carry_10 : SumCarrygenerator port map(GP=>GP10_0,c=>c(9) ,p=>GP10_10(1),S=>Sum(10),C_out=>c(10));
-sum_carry_11 : SumCarrygenerator port map(GP=>GP11_0,c=>c(10),p=>GP11_11(1),S=>Sum(11),C_out=>c(11));
-sum_carry_12 : SumCarrygenerator port map(GP=>GP12_0,c=>c(11),p=>GP12_12(1),S=>Sum(12),C_out=>c(12));
-sum_carry_13 : SumCarrygenerator port map(GP=>GP13_0,c=>c(12),p=>GP13_13(1),S=>Sum(13),C_out=>c(13));
-sum_carry_14 : SumCarrygenerator port map(GP=>GP14_0,c=>c(13),p=>GP14_14(1),S=>Sum(14),C_out=>c(14));
-sum_carry_15 : SumCarrygenerator port map(GP=>GP15_0,c=>c(14),p=>GP15_15(1),S=>Sum(15),C_out=>Carry_Output);
+sum_carry_0  : SumCarrygenerator port map(GP=>GP0_0 ,c=>Carry_in  ,p=>GP0_0(1)  ,C_in=>Carry_in,S=>Sum(0) ,C_out=>c(0));
+sum_carry_1  : SumCarrygenerator port map(GP=>GP1_0 ,c=>c(0)      ,p=>GP1_1(1)  ,C_in=>Carry_in,S=>Sum(1) ,C_out=>c(1));
+sum_carry_2  : SumCarrygenerator port map(GP=>GP2_0 ,c=>c(1)      ,p=>GP2_2(1)  ,C_in=>Carry_in,S=>Sum(2) ,C_out=>c(2));
+sum_carry_3  : SumCarrygenerator port map(GP=>GP3_0 ,c=>c(2)      ,p=>GP3_3(1)  ,C_in=>Carry_in,S=>Sum(3) ,C_out=>c(3));
+sum_carry_4  : SumCarrygenerator port map(GP=>GP4_0 ,c=>c(3)      ,p=>GP4_4(1)  ,C_in=>Carry_in,S=>Sum(4) ,C_out=>c(4));
+sum_carry_5  : SumCarrygenerator port map(GP=>GP5_0 ,c=>c(4)      ,p=>GP5_5(1)  ,C_in=>Carry_in,S=>Sum(5) ,C_out=>c(5));
+sum_carry_6  : SumCarrygenerator port map(GP=>GP6_0 ,c=>c(5)      ,p=>GP6_6(1)  ,C_in=>Carry_in,S=>Sum(6) ,C_out=>c(6));
+sum_carry_7  : SumCarrygenerator port map(GP=>GP7_0 ,c=>c(6)      ,p=>GP7_7(1)  ,C_in=>Carry_in,S=>Sum(7) ,C_out=>c(7));
+sum_carry_8  : SumCarrygenerator port map(GP=>GP8_0 ,c=>c(7)      ,p=>GP8_8(1)  ,C_in=>Carry_in,S=>Sum(8) ,C_out=>c(8));
+sum_carry_9  : SumCarrygenerator port map(GP=>GP9_0 ,c=>c(8)      ,p=>GP9_9(1)  ,C_in=>Carry_in,S=>Sum(9) ,C_out=>c(9));
+sum_carry_10 : SumCarrygenerator port map(GP=>GP10_0,c=>c(9)      ,p=>GP10_10(1),C_in=>Carry_in,S=>Sum(10),C_out=>c(10));
+sum_carry_11 : SumCarrygenerator port map(GP=>GP11_0,c=>c(10)     ,p=>GP11_11(1),C_in=>Carry_in,S=>Sum(11),C_out=>c(11));
+sum_carry_12 : SumCarrygenerator port map(GP=>GP12_0,c=>c(11)     ,p=>GP12_12(1),C_in=>Carry_in,S=>Sum(12),C_out=>c(12));
+sum_carry_13 : SumCarrygenerator port map(GP=>GP13_0,c=>c(12)     ,p=>GP13_13(1),C_in=>Carry_in,S=>Sum(13),C_out=>c(13));
+sum_carry_14 : SumCarrygenerator port map(GP=>GP14_0,c=>c(13)     ,p=>GP14_14(1),C_in=>Carry_in,S=>Sum(14),C_out=>c(14));
+sum_carry_15 : SumCarrygenerator port map(GP=>GP15_0,c=>c(14)     ,p=>GP15_15(1),C_in=>Carry_in,S=>Sum(15),C_out=>Carry_Output);
 
 end Structural;
