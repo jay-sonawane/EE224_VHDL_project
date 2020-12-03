@@ -1,6 +1,6 @@
 entity MY_XOR is 
-port( A,B:in bit_vector(0 to 15);
-		O:out bit_vector(0 to 15)
+port( I0,I1:in bit_vector(15 downto 0);
+		A:out bit_vector(15 downto 0)
 		);
 		
 End MY_XOR;
@@ -8,8 +8,8 @@ End MY_XOR;
  
  begin
  
--- O <= A and B;
+-- O <= I0 and I1;
 GEN_XOR: for I in 0 to 15 generate
-O(I) <= A(I) XOR B(I);
+A(I) <= I0(I) XOR I1(I);
 end generate GEN_XOR;
  end behavioral;

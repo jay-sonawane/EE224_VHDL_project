@@ -3,13 +3,20 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 --define entity KoggeStoneFastAdder
 entity KoggeStoneFastAdder is 
-    Port( Input0,Input1: in bit_vector(15 downto 0);
+    Port( Input0,Input2: in bit_vector(15 downto 0);
           Sum	 		  : out bit_vector(15 downto 0);
 			 Carry_in     : in bit;
 			 Carry_Output : out bit);
 end KoggeStoneFastAdder;
 
 architecture Structural of KoggeStoneFastAdder is
+
+
+--Component for XOR
+component XORGate
+port(Input0,Input1:in bit;
+	  Output  :out bit);
+end component;
 
 --add component GP_Generator
 component GP_Generator
@@ -41,7 +48,14 @@ signal GP8_0,GP9_0,GP10_0,GP11_0,GP12_0,GP13_0,GP14_0,GP15_0																		: 
 --define carry
 signal c : bit_vector(14 downto 0);
 
+signal Input1: bit_vector(15 downto 0);--For storing the complemented version
+
 begin
+
+--Complementing second input when subtractor is needed
+Comp: for I in 0 to 15 generate
+Input1(I)<= Input2(I) XOR Carry_in;
+end generate Comp;
 	
 --Stage 0
 

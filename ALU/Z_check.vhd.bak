@@ -1,0 +1,23 @@
+entity Z_check is
+	port(
+		I0: in bit_vector(15 downto 0);
+		X : out bit
+		);
+end entity Z_check;
+		
+	
+architecture Struct of Z_check is
+
+component MUX_2                    -- MUX (for 2 bits) component declaration
+   port (I0, I1, S: in bit;
+      X: out bit);
+  end component;
+
+  signal vec_0 : bit_vector(15 downto 0);
+  begin
+  vec_0(0)<='0'
+  GEN_OR: for I in 0 to 14 generate
+	U: orGate port map(vec_0(I), I0(I), vec_0(I+1));
+end generate GEN_OR;
+	U2: orGate port map(vec_0(15), I0(15), X);
+ end Struct;

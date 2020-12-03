@@ -8,26 +8,26 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/Quartus/quartus projects/Kogge Stone Fast Adder/simulation/modelsim
+Z0 dC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/simulation/modelsim
 Eandgate
-Z1 w1606923603
+Z1 w1606996826
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 4
 R0
-Z4 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd
-Z5 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd
+Z4 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd
+Z5 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd
 l0
 L5 1
 VKJIzIZ42ek95bf=4<e84B0
 !s100 eLZh10PHf1iiMg2:kYeQc2
 Z6 OV;C;2020.1;71
 31
-Z7 !s110 1606995249
+Z7 !s110 1606999717
 !i10b 1
-Z8 !s108 1606995249.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd|
-Z10 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd|
+Z8 !s108 1606999716.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd|
+Z10 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd|
 !i113 1
 Z11 o-93 -work work
 Z12 tExplicit 1 CvgOpt 0
@@ -51,24 +51,24 @@ R10
 R11
 R12
 Egp_generator
-Z14 w1606980141
+R1
 R2
 R3
 !i122 3
 R0
-Z15 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd
-Z16 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd
+Z14 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd
+Z15 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd
 l0
 L5 1
 V3>[@055Ti8dOiQLgl12dh2
 !s100 kHZ4LMGe5?8BEXTGMThR;1
 R6
 31
-R7
+Z16 !s110 1606999716
 !i10b 1
 R8
-Z17 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd|
-Z18 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd|
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd|
+Z18 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd|
 !i113 1
 R11
 R12
@@ -83,7 +83,7 @@ VEVWE:jNRT]4>N1@Vd3NCO3
 !s100 fPKaVFDBmbOXFoCa4nkE13
 R6
 31
-R7
+R16
 !i10b 1
 R8
 R17
@@ -92,24 +92,24 @@ R18
 R11
 R12
 Egpcell
-Z19 w1606995227
+R1
 R2
 R3
 !i122 1
 R0
-Z20 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd
-Z21 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd
+Z19 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd
+Z20 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd
 l0
 L5 1
 V2dzY]`K?iPB__?:eT3ECK2
 !s100 ;KO1P5C1=6_8elQS^nJoU2
 R6
 31
-Z22 !s110 1606995248
+R16
 !i10b 1
-Z23 !s108 1606995248.000000
-Z24 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd|
-Z25 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd|
+Z21 !s108 1606999715.000000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd|
+Z23 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd|
 !i113 1
 R11
 R12
@@ -124,63 +124,63 @@ V4Z?[OD3AFU[17gob<mg[A2
 !s100 CH?595?PcF1]j9YZebQ=G2
 R6
 31
-R22
+R16
 !i10b 1
+R21
+R22
 R23
-R24
-R25
 !i113 1
 R11
 R12
 Ekoggestonefastadder
-Z26 w1606988432
+Z24 w1606998947
 R2
 R3
 !i122 0
 R0
-Z27 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
-Z28 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
+Z25 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
+Z26 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd
 l0
 L5 1
-VOVOfV=E<8?YCm?<;HRU^T0
-!s100 nL=5FiSamLlDZjJLN31@C0
+Vj3[H`L6]TH4OD4Xn?iEc11
+!s100 D5V@8nDo8LXl]@0NiRXbR0
 R6
 31
-R22
+Z27 !s110 1606999715
 !i10b 1
-R23
-Z29 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
-Z30 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
+Z28 !s108 1606999714.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
+Z30 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd|
 !i113 1
 R11
 R12
 Astructural
 R2
 R3
-DEx4 work 19 koggestonefastadder 0 22 OVOfV=E<8?YCm?<;HRU^T0
+DEx4 work 19 koggestonefastadder 0 22 j3[H`L6]TH4OD4Xn?iEc11
 !i122 0
-l44
-L12 133
-V[:m<Y10dHmgJCmmfR:F873
-!s100 iZW3dP2Ba56]gUnT3lGan3
+l53
+L12 147
+Vh9=e;NDXeVSjRkmACLf0d0
+!s100 ocWJFn7YbKKaoWea]=FRG2
 R6
 31
-R22
+R27
 !i10b 1
-R23
+R28
 R29
 R30
 !i113 1
 R11
 R12
 Enotgate
-Z31 w1606923621
+R1
 R2
 R3
 !i122 5
 R0
-Z32 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd
-Z33 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd
+Z31 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd
+Z32 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd
 l0
 L5 1
 Vn21UYzMaXd5T5MkGDY8:_0
@@ -189,9 +189,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z34 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd|
-Z35 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd|
+Z33 !s108 1606999717.000000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd|
+Z35 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd|
 !i113 1
 R11
 R12
@@ -208,20 +208,20 @@ R6
 31
 R7
 !i10b 1
-R8
+R33
 R34
 R35
 !i113 1
 R11
 R12
 Eorgate
-Z36 w1606923640
+R1
 R2
 R3
 !i122 6
 R0
-Z37 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd
-Z38 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd
+Z36 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd
+Z37 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd
 l0
 L5 1
 VXg_B?aK^HTBOMg]WaHCkn3
@@ -230,9 +230,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z39 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd|
-Z40 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd|
+R33
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd|
+Z39 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd|
 !i113 1
 R11
 R12
@@ -249,31 +249,31 @@ R6
 31
 R7
 !i10b 1
-R8
+R33
+R38
 R39
-R40
 !i113 1
 R11
 R12
 Esumcarrygenerator
-Z41 w1606988436
+Z40 w1606996827
 R2
 R3
 !i122 2
 R0
-Z42 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd
-Z43 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd
+Z41 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd
+Z42 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd
 l0
 L5 1
 V@g;Yi=:jKY;PYc;`@=hkf0
 !s100 j@h7fQ>^k[b?NTHfBHVDL2
 R6
 31
-R7
+R16
 !i10b 1
-R23
-Z44 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
-Z45 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
+R8
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
+Z44 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd|
 !i113 1
 R11
 R12
@@ -288,33 +288,33 @@ V>6:^QW8hiJWIMJ0@0`YQa0
 !s100 EdIB_X23P=4I>XW1LSY0L2
 R6
 31
-R7
+R16
 !i10b 1
-R23
+R8
+R43
 R44
-R45
 !i113 1
 R11
 R12
 Etestbench
-Z46 w1606995222
+Z45 w1606999371
 R2
 R3
 !i122 8
 R0
-Z47 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd
-Z48 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd
+Z46 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd
+Z47 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd
 l0
 L4 1
 V?;3E9R?=9NO@>;;RGnNL=3
 !s100 zV?DSKOdjRnaRgmTS>F@00
 R6
 31
-R7
+Z48 !s110 1606999718
 !i10b 1
-R8
-Z49 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
-!s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
+Z49 !s108 1606999718.000000
+Z50 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd|
+!s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd|
 !i113 1
 R11
 R12
@@ -325,37 +325,37 @@ DEx4 work 9 testbench 0 22 ?;3E9R?=9NO@>;;RGnNL=3
 !i122 8
 l20
 L7 54
-VERj:Wi2Q@X7;hl6c7RnYj0
-!s100 UbJMeAcm2;@z8z65?kj]82
+VGcC_K1Bk4^AFPB4Ab09EW0
+!s100 _8o>8:[oACaR@?iZ;=7FB2
 R6
 31
-R7
+R48
 !i10b 1
-R8
 R49
-Z50 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd|
+R50
+Z51 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd|
 !i113 1
 R11
 R12
 Exorgate
-Z51 w1606923662
+R40
 R2
 R3
 !i122 7
 R0
-Z52 8D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd
-Z53 FD:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd
+Z52 8C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd
+Z53 FC:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd
 l0
 L5 1
 VK23CSd`H4RV0^:3WY?:XF0
 !s100 ^3iP?M2G<Q``@Oz8G:00?0
 R6
 31
-R7
+R48
 !i10b 1
-R8
-Z54 !s90 -reportprogress|300|-93|-work|work|D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd|
-Z55 !s107 D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd|
+R33
+Z54 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd|
+Z55 !s107 C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd|
 !i113 1
 R11
 R12
@@ -370,9 +370,9 @@ VG;G47^gRQnf1i:YhUcTXi3
 !s100 O;60@]M]Mh9G^AVLihdSm3
 R6
 31
-R7
+R48
 !i10b 1
-R8
+R33
 R54
 R55
 !i113 1

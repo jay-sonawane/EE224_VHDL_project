@@ -1,6 +1,6 @@
 entity MY_NAND is 
-port( A,B:in bit_vector(0 to 15);
-		O:out bit_vector(0 to 15)
+port( I0,I1:in bit_vector(15 downto 0);
+		A:out bit_vector(15 downto 0)
 		);
 		
 End MY_NAND;
@@ -8,8 +8,8 @@ End MY_NAND;
  
  begin
  
--- O <= A and B;
+-- O <= I0 and I1;
 GEN_NAND: for I in 0 to 15 generate
-O(I) <= A(I) NAND B(I);
+A(I) <= I0(I) NAND I1(I);
 end generate GEN_NAND;
  end behavioral;

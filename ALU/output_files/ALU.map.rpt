@@ -1,0 +1,479 @@
+Analysis & Synthesis report for ALU
+Thu Dec 03 20:06:56 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "Z_check:U6|orGate:\GEN_OR:0:U"
+ 10. Port Connectivity Checks: "MUX_2:U5"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Dec 03 20:06:56 2020       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; ALU                                         ;
+; Top-level Entity Name           ; ALU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 52                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; ALU                ; ALU                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
+; ALU.vhd                          ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd                 ;         ;
+; MUX_vec.vhd                      ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd             ;         ;
+; Z_check.vhd                      ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd             ;         ;
+; koggestonefastadder.vhd          ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd ;         ;
+; gp_generator.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd        ;         ;
+; andgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd             ;         ;
+; xorgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd             ;         ;
+; notgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd             ;         ;
+; orgate.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd              ;         ;
+; gpcell.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd              ;         ;
+; sumcarrygenerator.vhd            ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd   ;         ;
+; my_nand.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd             ;         ;
+; my_xor.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd              ;         ;
+; mux_2.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd               ;         ;
++----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 75       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 120      ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 30       ;
+;     -- 5 input functions                    ; 49       ;
+;     -- 4 input functions                    ; 12       ;
+;     -- <=3 input functions                  ; 29       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 52       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; S0~input ;
+; Maximum fan-out                             ; 72       ;
+; Total fan-out                               ; 630      ;
+; Average fan-out                             ; 2.81     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name         ; Library Name ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+; |ALU                                  ; 120 (0)             ; 0 (0)                     ; 0                 ; 0          ; 52   ; 0            ; |ALU                                                                                    ; ALU                 ; work         ;
+;    |KoggeStoneFastAdder:U0|           ; 45 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0                                                             ; KoggeStoneFastAdder ; work         ;
+;       |GP_Generator:GP_10_10|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_10_10                                       ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_10_10|XORGate:P                             ; XORGate             ; work         ;
+;             |andGate:I0_barI1|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_10_10|XORGate:P|andGate:I0_barI1            ; andGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_10_10|XORGate:P|orGate:Output_xor           ; orGate              ; work         ;
+;       |GP_Generator:GP_11_11|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_11_11                                       ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_11_11|XORGate:P                             ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_11_11|XORGate:P|orGate:Output_xor           ; orGate              ; work         ;
+;       |GP_Generator:GP_12_12|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_12_12                                       ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_12_12|XORGate:P                             ; XORGate             ; work         ;
+;             |andGate:I0_barI1|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_12_12|XORGate:P|andGate:I0_barI1            ; andGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_12_12|XORGate:P|orGate:Output_xor           ; orGate              ; work         ;
+;       |GP_Generator:GP_13_13|         ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_13_13                                       ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_13_13|XORGate:P                             ; XORGate             ; work         ;
+;             |andGate:I0_barI1|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_13_13|XORGate:P|andGate:I0_barI1            ; andGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_13_13|XORGate:P|orGate:Output_xor           ; orGate              ; work         ;
+;       |GP_Generator:GP_14_14|         ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_14_14                                       ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_14_14|XORGate:P                             ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_14_14|XORGate:P|orGate:Output_xor           ; orGate              ; work         ;
+;       |GP_Generator:GP_2_2|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_2_2                                         ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_2_2|XORGate:P                               ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_2_2|XORGate:P|orGate:Output_xor             ; orGate              ; work         ;
+;       |GP_Generator:GP_3_3|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_3_3                                         ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_3_3|XORGate:P                               ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_3_3|XORGate:P|orGate:Output_xor             ; orGate              ; work         ;
+;       |GP_Generator:GP_4_4|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_4_4                                         ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_4_4|XORGate:P                               ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_4_4|XORGate:P|orGate:Output_xor             ; orGate              ; work         ;
+;       |GP_Generator:GP_8_8|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_8_8                                         ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_8_8|XORGate:P                               ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_8_8|XORGate:P|orGate:Output_xor             ; orGate              ; work         ;
+;       |GP_Generator:GP_9_9|           ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_9_9                                         ; GP_Generator        ; work         ;
+;          |XORGate:P|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_9_9|XORGate:P                               ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GP_Generator:GP_9_9|XORGate:P|orGate:Output_xor             ; orGate              ; work         ;
+;       |GPcell:GP_10_7|                ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_10_7                                              ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_10_7|orGate:G_i_k                                 ; orGate              ; work         ;
+;       |GPcell:GP_11_8|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_11_8                                              ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_11_8|orGate:G_i_k                                 ; orGate              ; work         ;
+;       |GPcell:GP_1_0|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_1_0                                               ; GPcell              ; work         ;
+;          |andGate:P_i_jG_jMinus1_k|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_1_0|andGate:P_i_jG_jMinus1_k                      ; andGate             ; work         ;
+;       |GPcell:GP_3_0|                 ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_3_0                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_3_0|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_4_1|                 ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_4_1                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_4_1|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_5_2|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_5_2                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_5_2|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_6_3|                 ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_6_3                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_6_3|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_7_0|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_7_0                                               ; GPcell              ; work         ;
+;          |andGate:P_i_jG_jMinus1_k|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_7_0|andGate:P_i_jG_jMinus1_k                      ; andGate             ; work         ;
+;       |GPcell:GP_7_4|                 ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_7_4                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_7_4|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_8_5|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_8_5                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_8_5|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |GPcell:GP_9_6|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_9_6                                               ; GPcell              ; work         ;
+;          |orGate:G_i_k|               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|GPcell:GP_9_6|orGate:G_i_k                                  ; orGate              ; work         ;
+;       |SumCarrygenerator:sum_carry_1| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_1                               ; SumCarrygenerator   ; work         ;
+;          |andGate:temp_1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_1|andGate:temp_1                ; andGate             ; work         ;
+;       |SumCarrygenerator:sum_carry_3| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_3                               ; SumCarrygenerator   ; work         ;
+;          |XORGate:Sum|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_3|XORGate:Sum                   ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_3|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;          |orGate:Carry_out|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_3|orGate:Carry_out              ; orGate              ; work         ;
+;       |SumCarrygenerator:sum_carry_4| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_4                               ; SumCarrygenerator   ; work         ;
+;          |XORGate:Sum|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_4|XORGate:Sum                   ; XORGate             ; work         ;
+;             |orGate:Output_xor|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_4|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;          |orGate:Carry_out|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_4|orGate:Carry_out              ; orGate              ; work         ;
+;       |SumCarrygenerator:sum_carry_5| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_5                               ; SumCarrygenerator   ; work         ;
+;          |orGate:Carry_out|           ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_5|orGate:Carry_out              ; orGate              ; work         ;
+;       |SumCarrygenerator:sum_carry_6| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_6                               ; SumCarrygenerator   ; work         ;
+;          |orGate:Carry_out|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_6|orGate:Carry_out              ; orGate              ; work         ;
+;       |SumCarrygenerator:sum_carry_7| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_7                               ; SumCarrygenerator   ; work         ;
+;          |andGate:temp_1|             ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_7|andGate:temp_1                ; andGate             ; work         ;
+;    |MUX_2:U5|                         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_2:U5                                                                           ; MUX_2               ; work         ;
+;       |andGate:U1|                    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_2:U5|andGate:U1                                                                ; andGate             ; work         ;
+;    |MUX_vec:U4|                       ; 63 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4                                                                         ; MUX_vec             ; work         ;
+;       |MUX_2:\GEN_MUX:0:U|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:0:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:0:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:10:U|           ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:10:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:10:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:11:U|           ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:11:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:11:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:12:U|           ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:12:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:12:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:13:U|           ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:13:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:13:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:14:U|           ; 10 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:14:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 10 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:14:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:15:U|           ; 13 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:15:U                                                     ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:15:U|orGate:U3                                           ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:1:U|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:1:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:1:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:2:U|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:2:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:2:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:3:U|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:3:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:3:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:4:U|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:4:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:4:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:5:U|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:5:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:5:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:6:U|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:6:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:6:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:7:U|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:7:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:7:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:8:U|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:8:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:8:U|orGate:U3                                            ; orGate              ; work         ;
+;       |MUX_2:\GEN_MUX:9:U|            ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:9:U                                                      ; MUX_2               ; work         ;
+;          |orGate:U3|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|MUX_vec:U4|MUX_2:\GEN_MUX:9:U|orGate:U3                                            ; orGate              ; work         ;
+;    |Z_check:U6|                       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Z_check:U6                                                                         ; Z_check             ; work         ;
+;       |orGate:U2|                     ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|Z_check:U6|orGate:U2                                                               ; orGate              ; work         ;
++---------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Z_check:U6|orGate:\GEN_OR:0:U" ;
++--------+-------+----------+-------------------------------+
+; Port   ; Type  ; Severity ; Details                       ;
++--------+-------+----------+-------------------------------+
+; input0 ; Input ; Info     ; Stuck at GND                  ;
++--------+-------+----------+-------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "MUX_2:U5"   ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; i1   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 121                         ;
+;     normal            ; 121                         ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 49                          ;
+;         6 data inputs ; 30                          ;
+; boundary_port         ; 52                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 4.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec 03 20:06:36 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 15
+    Info (12023): Found entity 1: ALU File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file mux_vec.vhd
+    Info (12022): Found design unit 1: MUX_vec-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 10
+    Info (12023): Found entity 1: MUX_vec File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file z_check.vhd
+    Info (12022): Found design unit 1: Z_check-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd Line: 9
+    Info (12023): Found entity 1: Z_check File: C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd Line: 1
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (12125): Using design file koggestonefastadder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: KoggeStoneFastAdder-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 12
+    Info (12023): Found entity 1: KoggeStoneFastAdder File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 5
+Info (12128): Elaborating entity "KoggeStoneFastAdder" for hierarchy "KoggeStoneFastAdder:U0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 59
+Warning (12125): Using design file gp_generator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: GP_Generator-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 11
+    Info (12023): Found entity 1: GP_Generator File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 5
+Info (12128): Elaborating entity "GP_Generator" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 62
+Warning (12125): Using design file andgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: andGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd Line: 11
+    Info (12023): Found entity 1: andGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd Line: 5
+Info (12128): Elaborating entity "andGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|andGate:G" File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 28
+Warning (12125): Using design file xorgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: XORGate-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 11
+    Info (12023): Found entity 1: XORGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 5
+Info (12128): Elaborating entity "XORGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P" File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 29
+Warning (12125): Using design file notgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: notGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd Line: 11
+    Info (12023): Found entity 1: notGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd Line: 5
+Info (12128): Elaborating entity "notGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|notGate:I0_bar" File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 37
+Warning (12125): Using design file orgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: orGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd Line: 11
+    Info (12023): Found entity 1: orGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd Line: 5
+Info (12128): Elaborating entity "orGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|orGate:Output_xor" File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 43
+Warning (12125): Using design file gpcell.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: GPcell-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd Line: 11
+    Info (12023): Found entity 1: GPcell File: C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd Line: 5
+Info (12128): Elaborating entity "GPcell" for hierarchy "KoggeStoneFastAdder:U0|GPcell:GP_1_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 82
+Warning (12125): Using design file sumcarrygenerator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: SumCarryGenerator-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd Line: 11
+    Info (12023): Found entity 1: SumCarrygenerator File: C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd Line: 5
+Info (12128): Elaborating entity "SumCarrygenerator" for hierarchy "KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 141
+Warning (12125): Using design file my_nand.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: MY_NAND-behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd Line: 7
+    Info (12023): Found entity 1: MY_NAND File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd Line: 1
+Info (12128): Elaborating entity "MY_NAND" for hierarchy "MY_NAND:U1" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 60
+Warning (12125): Using design file my_xor.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: MY_XOR-behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd Line: 7
+    Info (12023): Found entity 1: MY_XOR File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd Line: 1
+Info (12128): Elaborating entity "MY_XOR" for hierarchy "MY_XOR:U2" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 61
+Info (12128): Elaborating entity "MUX_vec" for hierarchy "MUX_vec:U3" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 62
+Warning (12125): Using design file mux_2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: MUX_2-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd Line: 10
+    Info (12023): Found entity 1: MUX_2 File: C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd Line: 1
+Info (12128): Elaborating entity "MUX_2" for hierarchy "MUX_vec:U3|MUX_2:\GEN_MUX:0:U" File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 20
+Info (12128): Elaborating entity "Z_check" for hierarchy "Z_check:U6" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 65
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 120 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Thu Dec 03 20:06:56 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:37
+
+

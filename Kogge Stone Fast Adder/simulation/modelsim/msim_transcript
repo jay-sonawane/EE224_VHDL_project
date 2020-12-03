@@ -7,113 +7,113 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
 # vmap work rtl_work 
-# Copying D:/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:08 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd 
+# Start time: 18:18:34 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/KoggeStoneFastAdder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity KoggeStoneFastAdder
 # -- Compiling architecture Structural of KoggeStoneFastAdder
-# End time: 17:04:08 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:35 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:08 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/GPcell.vhd 
+# Start time: 18:18:35 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GPcell.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity GPcell
 # -- Compiling architecture Structural of GPcell
-# End time: 17:04:08 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:36 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:08 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/SumCarryGenerator.vhd 
+# Start time: 18:18:36 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/SumCarryGenerator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SumCarrygenerator
 # -- Compiling architecture Structural of SumCarryGenerator
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:01
+# End time: 18:18:36 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/GP_Generator.vhd 
+# Start time: 18:18:36 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/GP_Generator.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity GP_Generator
 # -- Compiling architecture Structural of GP_Generator
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:36 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/andGate.vhd 
+# Start time: 18:18:36 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/andGate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity andGate
 # -- Compiling architecture Behavioral of andGate
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:37 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/notGate.vhd 
+# Start time: 18:18:37 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/notGate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity notGate
 # -- Compiling architecture Behavioral of notGate
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:37 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/orGate.vhd 
+# Start time: 18:18:37 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/orGate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity orGate
 # -- Compiling architecture Behavioral of orGate
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:37 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/XORgate.vhd 
+# Start time: 18:18:37 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/XORgate.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity XORGate
 # -- Compiling architecture Structural of XORGate
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:38 on Dec 03,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd}
+# vcom -93 -work work {C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:04:09 on Dec 03,2020
-# vcom -reportprogress 300 -93 -work work D:/Quartus/quartus projects/Kogge Stone Fast Adder/testbench.vhd 
+# Start time: 18:18:38 on Dec 03,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/Adit/Desktop/vhdl_project/Kogge Stone Fast Adder/testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity testbench
 # -- Compiling architecture tb of testbench
-# End time: 17:04:09 on Dec 03,2020, Elapsed time: 0:00:00
+# End time: 18:18:38 on Dec 03,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 17:04:09 on Dec 03,2020
+# Start time: 18:18:38 on Dec 03,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -133,5 +133,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 40 ns
-# End time: 17:05:32 on Dec 03,2020, Elapsed time: 0:01:23
+# End time: 18:42:37 on Dec 03,2020, Elapsed time: 0:23:59
 # Errors: 0, Warnings: 0

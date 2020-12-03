@@ -10,7 +10,7 @@ signal A,B,S:bit_vector(15 downto 0);
 signal C_in,C_out:bit;
 
 component KoggeStoneFastAdder is
-   Port( Input0,Input1 : in bit_vector(15 downto 0);
+   Port( Input0,Input2 : in bit_vector(15 downto 0);
           Sum	 		  : out bit_vector(15 downto 0);
 			 Carry_in     : in bit;
 			 Carry_Output : out bit);
@@ -19,17 +19,17 @@ end component;
 
 begin 
 dut_instance:KoggeStoneFastAdder
-port map(Input0=>A,Input1=>B,Sum=>S,Carry_in=>C_in,Carry_output=>C_out);
+port map(Input0=>A,Input2=>B,Sum=>S,Carry_in=>C_in,Carry_output=>C_out);
 
 process
 begin
 
-A<="0000000000000000";
+A<="0000000010000000";
 B<="0000000010000000";
-C_in<='0';
+C_in<='1';
 
 wait for 5 ns;
-assert (S="0000000010000000" and C_out='0') report "First testbench is not ok";
+assert (S="0000000000000000" and C_out='1') report "First testbench is not ok";
 wait for 5 ns;
 
 A<="0000001001111111";
