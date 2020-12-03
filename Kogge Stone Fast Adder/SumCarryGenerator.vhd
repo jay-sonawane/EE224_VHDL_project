@@ -3,7 +3,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity SumCarrygenerator is
-Port (GP : in bit_vector(0 to 1);
+Port (GP : in bit_vector(1 downto 0);
 		c,p : in bit;
 		S,C_out : out bit);
 end SumCarryGenerator;
@@ -33,7 +33,7 @@ signal temp1: bit;
 
 begin
 
-C_out  <= GP(1);
+C_out  <= GP(0);
 Sum    :  XORgate port map(Input0=>c,Input1=>p,Output=>S);
 
 end Structural;

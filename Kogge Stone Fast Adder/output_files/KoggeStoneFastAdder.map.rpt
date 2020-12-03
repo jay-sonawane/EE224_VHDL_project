@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KoggeStoneFastAdder
-Wed Dec 02 22:42:52 2020
+Thu Dec 03 13:43:27 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec 02 22:42:52 2020       ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec 03 13:43:27 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; KoggeStoneFastAdder                         ;
 ; Top-level Entity Name           ; KoggeStoneFastAdder                         ;
@@ -183,31 +183,31 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 45              ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 64              ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 25              ;
-;     -- 5 input functions                    ; 11              ;
-;     -- 4 input functions                    ; 14              ;
-;     -- <=3 input functions                  ; 14              ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 49              ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; Input0[3]~input ;
-; Maximum fan-out                             ; 9               ;
-; Total fan-out                               ; 358             ;
-; Average fan-out                             ; 2.21            ;
-+---------------------------------------------+-----------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimate of Logic utilization (ALMs needed) ; 47               ;
+;                                             ;                  ;
+; Combinational ALUT usage for logic          ; 65               ;
+;     -- 7 input functions                    ; 0                ;
+;     -- 6 input functions                    ; 28               ;
+;     -- 5 input functions                    ; 8                ;
+;     -- 4 input functions                    ; 18               ;
+;     -- <=3 input functions                  ; 11               ;
+;                                             ;                  ;
+; Dedicated logic registers                   ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 49               ;
+;                                             ;                  ;
+; Total DSP Blocks                            ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; Input0[11]~input ;
+; Maximum fan-out                             ; 10               ;
+; Total fan-out                               ; 370              ;
+; Average fan-out                             ; 2.27             ;
++---------------------------------------------+------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -215,76 +215,75 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Entity Name         ; Library Name ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------------+--------------+
-; |KoggeStoneFastAdder                ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 49   ; 0            ; |KoggeStoneFastAdder                                                              ; KoggeStoneFastAdder ; work         ;
+; |KoggeStoneFastAdder                ; 65 (0)              ; 0 (0)                     ; 0                 ; 0          ; 49   ; 0            ; |KoggeStoneFastAdder                                                              ; KoggeStoneFastAdder ; work         ;
 ;    |GP_Generator:GP_0_0|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_0_0                                          ; GP_Generator        ; work         ;
-;       |andGate:G|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_0_0|andGate:G                                ; andGate             ; work         ;
-;    |GP_Generator:GP_10_10|          ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10                                        ; GP_Generator        ; work         ;
-;       |XORGate:P|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P                              ; XORGate             ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P                                ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_0_0|XORGate:P|orGate:Output_xor              ; orGate              ; work         ;
+;    |GP_Generator:GP_10_10|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10                                        ; GP_Generator        ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P                              ; XORGate             ; work         ;
 ;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|andGate:I0_barI1             ; andGate             ; work         ;
-;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_10_10|XORGate:P|orGate:Output_xor            ; orGate              ; work         ;
-;    |GP_Generator:GP_13_13|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_13_13                                        ; GP_Generator        ; work         ;
-;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P                              ; XORGate             ; work         ;
-;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_13_13|XORGate:P|andGate:I0_barI1             ; andGate             ; work         ;
+;    |GP_Generator:GP_12_12|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_12_12                                        ; GP_Generator        ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P                              ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_12_12|XORGate:P|orGate:Output_xor            ; orGate              ; work         ;
 ;    |GP_Generator:GP_14_14|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_14_14                                        ; GP_Generator        ; work         ;
 ;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P                              ; XORGate             ; work         ;
-;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|andGate:I0_barI1             ; andGate             ; work         ;
+;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_14_14|XORGate:P|orGate:Output_xor            ; orGate              ; work         ;
 ;    |GP_Generator:GP_15_15|          ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_15_15                                        ; GP_Generator        ; work         ;
-;       |andGate:G|                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_15_15|andGate:G                              ; andGate             ; work         ;
-;    |GP_Generator:GP_3_3|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_3_3                                          ; GP_Generator        ; work         ;
-;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P                                ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_3_3|XORGate:P|orGate:Output_xor              ; orGate              ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P                              ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_15_15|XORGate:P|orGate:Output_xor            ; orGate              ; work         ;
 ;    |GP_Generator:GP_4_4|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_4_4                                          ; GP_Generator        ; work         ;
 ;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P                                ; XORGate             ; work         ;
 ;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_4_4|XORGate:P|orGate:Output_xor              ; orGate              ; work         ;
-;    |GP_Generator:GP_6_6|            ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6                                          ; GP_Generator        ; work         ;
-;       |XORGate:P|                   ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P                                ; XORGate             ; work         ;
-;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|andGate:I0_barI1               ; andGate             ; work         ;
+;    |GP_Generator:GP_6_6|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6                                          ; GP_Generator        ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P                                ; XORGate             ; work         ;
 ;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_6_6|XORGate:P|orGate:Output_xor              ; orGate              ; work         ;
 ;    |GP_Generator:GP_7_7|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_7_7                                          ; GP_Generator        ; work         ;
 ;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P                                ; XORGate             ; work         ;
-;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|andGate:I0_barI1               ; andGate             ; work         ;
+;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_7_7|XORGate:P|orGate:Output_xor              ; orGate              ; work         ;
+;    |GP_Generator:GP_8_8|            ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_8_8                                          ; GP_Generator        ; work         ;
+;       |XORGate:P|                   ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P                                ; XORGate             ; work         ;
+;          |andGate:I0_barI1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GP_Generator:GP_8_8|XORGate:P|andGate:I0_barI1               ; andGate             ; work         ;
+;    |GPcell:GP_11_8|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_11_8                                               ; GPcell              ; work         ;
+;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_11_8|andGate:P_i_jG_jMinus1_k                      ; andGate             ; work         ;
 ;    |GPcell:GP_15_0|                 ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_15_0                                               ; GPcell              ; work         ;
 ;       |orGate:G_i_k|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_15_0|orGate:G_i_k                                  ; orGate              ; work         ;
 ;    |GPcell:GP_2_0|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_2_0                                                ; GPcell              ; work         ;
 ;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_2_0|orGate:G_i_k                                   ; orGate              ; work         ;
 ;    |GPcell:GP_3_0|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_3_0                                                ; GPcell              ; work         ;
-;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_3_0|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
+;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_3_0|orGate:G_i_k                                   ; orGate              ; work         ;
 ;    |GPcell:GP_3_2|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_3_2                                                ; GPcell              ; work         ;
 ;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_3_2|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
-;    |GPcell:GP_4_0|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_4_0                                                ; GPcell              ; work         ;
-;       |orGate:G_i_k|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_4_0|orGate:G_i_k                                   ; orGate              ; work         ;
-;    |GPcell:GP_5_0|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_0                                                ; GPcell              ; work         ;
+;    |GPcell:GP_4_0|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_4_0                                                ; GPcell              ; work         ;
+;       |orGate:G_i_k|                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_4_0|orGate:G_i_k                                   ; orGate              ; work         ;
+;    |GPcell:GP_5_0|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_0                                                ; GPcell              ; work         ;
+;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_0|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
 ;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_0|orGate:G_i_k                                   ; orGate              ; work         ;
-;    |GPcell:GP_5_2|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_2                                                ; GPcell              ; work         ;
-;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_5_2|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
 ;    |GPcell:GP_6_0|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_0                                                ; GPcell              ; work         ;
-;       |orGate:G_i_k|                ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_0|orGate:G_i_k                                   ; orGate              ; work         ;
-;    |GPcell:GP_6_3|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_3                                                ; GPcell              ; work         ;
-;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_3|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
+;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_0|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
+;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_6_0|orGate:G_i_k                                   ; orGate              ; work         ;
+;    |GPcell:GP_7_0|                  ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_7_0                                                ; GPcell              ; work         ;
+;       |andGate:P_i_jG_jMinus1_k|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_7_0|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
+;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_7_0|orGate:G_i_k                                   ; orGate              ; work         ;
 ;    |GPcell:GP_7_4|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_7_4                                                ; GPcell              ; work         ;
 ;       |andGate:P_i_jG_jMinus1_k|    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_7_4|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
-;    |GPcell:GP_9_6|                  ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_9_6                                                ; GPcell              ; work         ;
-;       |andGate:P_i_jG_jMinus1_k|    ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_9_6|andGate:P_i_jG_jMinus1_k                       ; andGate             ; work         ;
-;    |GPcell:GP_9_8|                  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_9_8                                                ; GPcell              ; work         ;
-;       |orGate:G_i_k|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|GPcell:GP_9_8|orGate:G_i_k                                   ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_10| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_11| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_12| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_13| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_14| ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_15| ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15                               ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum                   ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_10| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_10|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_11| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_11|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_12| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_12|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_13| ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_13|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_14| ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_14|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_15| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15                               ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum                   ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_15|XORGate:Sum|orGate:Output_xor ; orGate              ; work         ;
 ;    |SumCarrygenerator:sum_carry_1|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1                                ; SumCarrygenerator   ; work         ;
 ;       |XORGate:Sum|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum                    ; XORGate             ; work         ;
 ;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_1|XORGate:Sum|orGate:Output_xor  ; orGate              ; work         ;
@@ -309,9 +308,9 @@ https://fpgasoftware.intel.com/eula.
 ;    |SumCarrygenerator:sum_carry_8|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8                                ; SumCarrygenerator   ; work         ;
 ;       |XORGate:Sum|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum                    ; XORGate             ; work         ;
 ;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_8|XORGate:Sum|orGate:Output_xor  ; orGate              ; work         ;
-;    |SumCarrygenerator:sum_carry_9|  ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9                                ; SumCarrygenerator   ; work         ;
-;       |XORGate:Sum|                 ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum                    ; XORGate             ; work         ;
-;          |orGate:Output_xor|        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|orGate:Output_xor  ; orGate              ; work         ;
+;    |SumCarrygenerator:sum_carry_9|  ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9                                ; SumCarrygenerator   ; work         ;
+;       |XORGate:Sum|                 ; 6 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum                    ; XORGate             ; work         ;
+;          |orGate:Output_xor|        ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |KoggeStoneFastAdder|SumCarrygenerator:sum_carry_9|XORGate:Sum|orGate:Output_xor  ; orGate              ; work         ;
 +-------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -345,18 +344,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 65                          ;
-;     normal            ; 65                          ;
+; arriav_lcell_comb     ; 66                          ;
+;     normal            ; 66                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 14                          ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 25                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 28                          ;
 ; boundary_port         ; 49                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.67                        ;
+; Average LUT depth     ; 3.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -365,7 +364,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -375,7 +374,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec 02 22:42:41 2020
+    Info: Processing started: Thu Dec 03 13:43:18 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KoggeStoneFastAdder -c KoggeStoneFastAdder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -417,14 +416,14 @@ Info (12128): Elaborating entity "SumCarrygenerator" for hierarchy "SumCarrygene
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 113 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 114 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 32 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 64 logic cells
+    Info (21061): Implemented 65 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4855 megabytes
-    Info: Processing ended: Wed Dec 02 22:42:52 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Thu Dec 03 13:43:27 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
