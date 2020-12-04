@@ -1,0 +1,602 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Adit/Desktop/vhdl_project/New/simulation/modelsim
+Ealu
+Z1 w1607073444
+!i122 13
+R0
+Z2 8C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd
+Z3 FC:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd
+l0
+L1 1
+V]C^IKE]?n?cPYhDbZDXH_0
+!s100 ]JIRi]gWVU]eMOd36kcaD0
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1607074810
+!i10b 1
+Z6 !s108 1607074810.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd|
+Z8 !s107 C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Astruct
+DEx4 work 3 alu 0 22 ]C^IKE]?n?cPYhDbZDXH_0
+!i122 13
+l58
+L15 55
+VT50DdaRVkdRO`>6NI_?c91
+!s100 k5hNMad0[8P^5jlBHD:L[1
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Eandgate
+Z11 w1606996826
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 12
+R0
+Z14 8C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd
+Z15 FC:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd
+l0
+L5 1
+VKJIzIZ42ek95bf=4<e84B0
+!s100 eLZh10PHf1iiMg2:kYeQc2
+R4
+31
+Z16 !s110 1607074809
+!i10b 1
+Z17 !s108 1607074809.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd|
+Z19 !s107 C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd|
+!i113 1
+R9
+R10
+Abehavioral
+R12
+R13
+DEx4 work 7 andgate 0 22 KJIzIZ42ek95bf=4<e84B0
+!i122 12
+l13
+Z20 L11 15
+VUcT2hJ:jWgRQl:o]AF]V03
+!s100 3hJ5cM`JoHmfdl4>X]mbN1
+R4
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R9
+R10
+Egp_generator
+R11
+R12
+R13
+!i122 10
+R0
+Z21 8C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd
+Z22 FC:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd
+l0
+L5 1
+V3>[@055Ti8dOiQLgl12dh2
+!s100 kHZ4LMGe5?8BEXTGMThR;1
+R4
+31
+R16
+!i10b 1
+R17
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd|
+Z24 !s107 C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd|
+!i113 1
+R9
+R10
+Astructural
+R12
+R13
+DEx4 work 12 gp_generator 0 22 3>[@055Ti8dOiQLgl12dh2
+!i122 10
+l25
+L11 21
+VEVWE:jNRT]4>N1@Vd3NCO3
+!s100 fPKaVFDBmbOXFoCa4nkE13
+R4
+31
+R16
+!i10b 1
+R17
+R23
+R24
+!i113 1
+R9
+R10
+Egpcell
+R11
+R12
+R13
+!i122 11
+R0
+Z25 8C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd
+Z26 FC:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd
+l0
+L5 1
+V2dzY]`K?iPB__?:eT3ECK2
+!s100 ;KO1P5C1=6_8elQS^nJoU2
+R4
+31
+R16
+!i10b 1
+R17
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd|
+Z28 !s107 C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd|
+!i113 1
+R9
+R10
+Astructural
+R12
+R13
+DEx4 work 6 gpcell 0 22 2dzY]`K?iPB__?:eT3ECK2
+!i122 11
+l28
+L11 26
+V4Z?[OD3AFU[17gob<mg[A2
+!s100 CH?595?PcF1]j9YZebQ=G2
+R4
+31
+R16
+!i10b 1
+R17
+R27
+R28
+!i113 1
+R9
+R10
+Ekoggestonefastadder
+Z29 w1607001518
+R12
+R13
+!i122 9
+R0
+Z30 8C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd
+Z31 FC:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd
+l0
+L5 1
+Vj3[H`L6]TH4OD4Xn?iEc11
+!s100 D5V@8nDo8LXl]@0NiRXbR0
+R4
+31
+Z32 !s110 1607074808
+!i10b 1
+Z33 !s108 1607074808.000000
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd|
+Z35 !s107 C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd|
+!i113 1
+R9
+R10
+Astructural
+R12
+R13
+DEx4 work 19 koggestonefastadder 0 22 j3[H`L6]TH4OD4Xn?iEc11
+!i122 9
+l53
+L12 147
+Vh9=e;NDXeVSjRkmACLf0d0
+!s100 ocWJFn7YbKKaoWea]=FRG2
+R4
+31
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 1
+R9
+R10
+Emux_2
+Z36 w1607006178
+!i122 8
+R0
+Z37 8C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd
+Z38 FC:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd
+l0
+L1 1
+VZghi2B?B?m24f`E^nE:Kj1
+!s100 hkMaLmd1IgGSLE<NQOgb51
+R4
+31
+R32
+!i10b 1
+R33
+Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd|
+Z40 !s107 C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd|
+!i113 1
+R9
+R10
+Astruct
+DEx4 work 5 mux_2 0 22 Zghi2B?B?m24f`E^nE:Kj1
+!i122 8
+l26
+L10 22
+V>bPAlBF3Cz3JH>:BeBUW<2
+!s100 WTL`2o`ahgFbS5@;hg8DM0
+R4
+31
+R32
+!i10b 1
+R33
+R39
+R40
+!i113 1
+R9
+R10
+Emux_vec
+Z41 w1607004260
+!i122 7
+R0
+Z42 8C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd
+Z43 FC:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd
+l0
+L1 1
+VdoR306gFCi7d77nP]Z9hH2
+!s100 I<[L^l[2ORgE:<jID0iBR2
+R4
+31
+R32
+!i10b 1
+R33
+Z44 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd|
+Z45 !s107 C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd|
+!i113 1
+R9
+R10
+Astruct
+DEx4 work 7 mux_vec 0 22 doR306gFCi7d77nP]Z9hH2
+!i122 7
+l18
+L10 13
+VIaj>C`W=>f5J]=JX12UA12
+!s100 [EO3m`A3o;Xcm5FVS3J^R1
+R4
+31
+R32
+!i10b 1
+R33
+R44
+R45
+!i113 1
+R9
+R10
+Emy_nand
+Z46 w1607005955
+!i122 6
+R0
+Z47 8C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd
+Z48 FC:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd
+l0
+L1 1
+Vk^md]bDX3]MYd51LMdZL<3
+!s100 CE4aYBalG>0`J8i1JigKX0
+R4
+31
+R32
+!i10b 1
+R33
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd|
+Z50 !s107 C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd|
+!i113 1
+R9
+R10
+Abehavioral
+DEx4 work 7 my_nand 0 22 k^md]bDX3]MYd51LMdZL<3
+!i122 6
+l9
+L7 9
+VIQX3Z=_VMFCMMS3<XBO[H2
+!s100 oHNY0Ragm>6Ee@;ii]MEG1
+R4
+31
+R32
+!i10b 1
+R33
+R49
+R50
+!i113 1
+R9
+R10
+Emy_xor
+Z51 w1607005950
+!i122 5
+R0
+Z52 8C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd
+Z53 FC:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd
+l0
+L1 1
+VB>N05<=4Kb`T00jeHC6z:0
+!s100 Z_k94McIPei`gO^G2TT[91
+R4
+31
+Z54 !s110 1607074807
+!i10b 1
+Z55 !s108 1607074807.000000
+Z56 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd|
+Z57 !s107 C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd|
+!i113 1
+R9
+R10
+Abehavioral
+DEx4 work 6 my_xor 0 22 B>N05<=4Kb`T00jeHC6z:0
+!i122 5
+l9
+L7 9
+V]zczDjK_[D10E1KBbhf?31
+!s100 ojaBDm]AL9]^5>]g?m:di2
+R4
+31
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R9
+R10
+Enotgate
+R11
+R12
+R13
+!i122 4
+R0
+Z58 8C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd
+Z59 FC:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd
+l0
+L5 1
+Vn21UYzMaXd5T5MkGDY8:_0
+!s100 Az64_Ni1z6]EYR@];]0:01
+R4
+31
+R54
+!i10b 1
+R55
+Z60 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd|
+Z61 !s107 C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd|
+!i113 1
+R9
+R10
+Abehavioral
+R12
+R13
+DEx4 work 7 notgate 0 22 n21UYzMaXd5T5MkGDY8:_0
+!i122 4
+l13
+R20
+V7<L<<2V8N?mFM;_B@OPPk2
+!s100 f;04Yh1DcVShY5_KD?Fd32
+R4
+31
+R54
+!i10b 1
+R55
+R60
+R61
+!i113 1
+R9
+R10
+Eorgate
+R11
+R12
+R13
+!i122 3
+R0
+Z62 8C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd
+Z63 FC:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd
+l0
+L5 1
+VXg_B?aK^HTBOMg]WaHCkn3
+!s100 Dn[mQQ1nJ1daOF0<icUMM0
+R4
+31
+R54
+!i10b 1
+R55
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd|
+Z65 !s107 C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd|
+!i113 1
+R9
+R10
+Abehavioral
+R12
+R13
+DEx4 work 6 orgate 0 22 Xg_B?aK^HTBOMg]WaHCkn3
+!i122 3
+l13
+R20
+V@Qi0=NZ<U2RAABdzg;VKD1
+!s100 BDZo]kRV3m1jecdz<HN]]1
+R4
+31
+R54
+!i10b 1
+R55
+R64
+R65
+!i113 1
+R9
+R10
+Esumcarrygenerator
+Z66 w1606996827
+R12
+R13
+!i122 2
+R0
+Z67 8C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd
+Z68 FC:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd
+l0
+L5 1
+V@g;Yi=:jKY;PYc;`@=hkf0
+!s100 j@h7fQ>^k[b?NTHfBHVDL2
+R4
+31
+R54
+!i10b 1
+Z69 !s108 1607074806.000000
+Z70 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd|
+Z71 !s107 C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd|
+!i113 1
+R9
+R10
+Astructural
+R12
+R13
+DEx4 work 17 sumcarrygenerator 0 22 @g;Yi=:jKY;PYc;`@=hkf0
+!i122 2
+l34
+L11 30
+V>6:^QW8hiJWIMJ0@0`YQa0
+!s100 EdIB_X23P=4I>XW1LSY0L2
+R4
+31
+R54
+!i10b 1
+R69
+R70
+R71
+!i113 1
+R9
+R10
+Etestbench
+Z72 w1607073253
+R12
+R13
+!i122 14
+R0
+Z73 8C:/Users/Adit/Desktop/vhdl_project/New/testbench.vhd
+Z74 FC:/Users/Adit/Desktop/vhdl_project/New/testbench.vhd
+l0
+L4 1
+V?;3E9R?=9NO@>;;RGnNL=3
+!s100 zV?DSKOdjRnaRgmTS>F@00
+R4
+31
+R5
+!i10b 1
+R6
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/testbench.vhd|
+!s107 C:/Users/Adit/Desktop/vhdl_project/New/testbench.vhd|
+!i113 1
+R9
+R10
+Atb
+R12
+R13
+DEx4 work 9 testbench 0 22 ?;3E9R?=9NO@>;;RGnNL=3
+!i122 14
+l25
+L7 372
+VQ>f65@ZliFK^i1fbcK8LT0
+!s100 XM`l5o;7G8SF8;9e8QYce0
+R4
+31
+R5
+!i10b 1
+R6
+R75
+Z76 !s107 C:/Users/Adit/Desktop/vhdl_project/New/testbench.vhd|
+!i113 1
+R9
+R10
+Exorgate
+R66
+R12
+R13
+!i122 1
+R0
+Z77 8C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd
+Z78 FC:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd
+l0
+L5 1
+VK23CSd`H4RV0^:3WY?:XF0
+!s100 ^3iP?M2G<Q``@Oz8G:00?0
+R4
+31
+Z79 !s110 1607074806
+!i10b 1
+R69
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd|
+Z81 !s107 C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd|
+!i113 1
+R9
+R10
+Astructural
+R12
+R13
+DEx4 work 7 xorgate 0 22 K23CSd`H4RV0^:3WY?:XF0
+!i122 1
+l34
+L11 36
+VG;G47^gRQnf1i:YhUcTXi3
+!s100 O;60@]M]Mh9G^AVLihdSm3
+R4
+31
+R79
+!i10b 1
+R69
+R80
+R81
+!i113 1
+R9
+R10
+Ez_check
+Z82 w1607005648
+!i122 0
+R0
+Z83 8C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd
+Z84 FC:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd
+l0
+L1 1
+VKC11cX7Sa4HAJZN1P>5]31
+!s100 ZV=6iXmg09KB=Jo8`n1Fd2
+R4
+31
+R79
+!i10b 1
+R69
+Z85 !s90 -reportprogress|300|-93|-work|work|C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd|
+Z86 !s107 C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd|
+!i113 1
+R9
+R10
+Astruct
+DEx4 work 7 z_check 0 22 KC11cX7Sa4HAJZN1P>5]31
+!i122 0
+l24
+L9 23
+VR7F=59decI8o3K^_gD@jN0
+!s100 ?DgE^?c]74eZ==mh]KS`^3
+R4
+31
+R79
+!i10b 1
+R69
+R85
+R86
+!i113 1
+R9
+R10

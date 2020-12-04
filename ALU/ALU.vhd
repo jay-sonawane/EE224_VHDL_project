@@ -54,14 +54,14 @@ end component;
   
 -- temporary signals for intermediate wires in the circuit
   signal Temp_0, Temp_1, Temp_2, Temp_3, Temp_4, Temp_5: bit;
-  signal vec_0, vec_1, vec_2, vec_3, vec_4 : bit_vector(15 downto 0);
+  signal vec_0, vec_1, vec_2, vec_3, vec_4: bit_vector(15 downto 0);
 begin
 U0: KoggeStoneFastAdder port map(I0, I1, vec_0, S0, Temp_0);
 U1: MY_NAND port map(I0, I1, vec_1);
 U2: MY_XOR port map(I0, I1, vec_2);
 U3: MUX_vec  port map(vec_1,vec_2, S0,vec_3);
 U4: MUX_vec port map(vec_0,vec_3, S1, vec_4);
-U5: MUX_2 port map(Temp_0, '0', S1, C); --To ret
+U5: MUX_2 port map(Temp_0, '0', S1, C); --To return carry out as 0
 U6: Z_check port map(vec_4,Z);
 
 A<=vec_4;

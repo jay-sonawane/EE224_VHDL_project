@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Dec 03 20:06:56 2020
+Fri Dec 04 14:53:34 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Dec 03 20:06:56 2020       ;
+; Analysis & Synthesis Status     ; Successful - Fri Dec 04 14:53:34 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
 ; Top-level Entity Name           ; ALU                                         ;
@@ -168,26 +168,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
-; ALU.vhd                          ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd                 ;         ;
-; MUX_vec.vhd                      ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd             ;         ;
-; Z_check.vhd                      ; yes             ; User VHDL File        ; C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd             ;         ;
-; koggestonefastadder.vhd          ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd ;         ;
-; gp_generator.vhd                 ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd        ;         ;
-; andgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd             ;         ;
-; xorgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd             ;         ;
-; notgate.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd             ;         ;
-; orgate.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd              ;         ;
-; gpcell.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd              ;         ;
-; sumcarrygenerator.vhd            ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd   ;         ;
-; my_nand.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd             ;         ;
-; my_xor.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd              ;         ;
-; mux_2.vhd                        ; yes             ; Auto-Found VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd               ;         ;
-+----------------------------------+-----------------+-----------------------+----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
+; Z_check.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd             ;         ;
+; XORgate.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd             ;         ;
+; SumCarryGenerator.vhd            ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd   ;         ;
+; orGate.vhd                       ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd              ;         ;
+; notGate.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd             ;         ;
+; MY_XOR.vhd                       ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd              ;         ;
+; MY_NAND.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd             ;         ;
+; MUX_vec.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd             ;         ;
+; MUX_2.vhd                        ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd               ;         ;
+; KoggeStoneFastAdder.vhd          ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd ;         ;
+; GP_Generator.vhd                 ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd        ;         ;
+; GPcell.vhd                       ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd              ;         ;
+; andGate.vhd                      ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd             ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd                 ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -403,66 +403,66 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 03 20:06:36 2020
+    Info: Processing started: Fri Dec 04 14:52:47 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
-    Info (12022): Found design unit 1: ALU-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 15
-    Info (12023): Found entity 1: ALU File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 1
-Info (12021): Found 2 design units, including 1 entities, in source file mux_vec.vhd
-    Info (12022): Found design unit 1: MUX_vec-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 10
-    Info (12023): Found entity 1: MUX_vec File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 1
 Info (12021): Found 2 design units, including 1 entities, in source file z_check.vhd
-    Info (12022): Found design unit 1: Z_check-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd Line: 9
-    Info (12023): Found entity 1: Z_check File: C:/Users/Adit/Desktop/vhdl_project/ALU/Z_check.vhd Line: 1
+    Info (12022): Found design unit 1: Z_check-Struct File: C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd Line: 9
+    Info (12023): Found entity 1: Z_check File: C:/Users/Adit/Desktop/vhdl_project/New/Z_check.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file xorgate.vhd
+    Info (12022): Found design unit 1: XORGate-Structural File: C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd Line: 11
+    Info (12023): Found entity 1: XORGate File: C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file sumcarrygenerator.vhd
+    Info (12022): Found design unit 1: SumCarryGenerator-Structural File: C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd Line: 11
+    Info (12023): Found entity 1: SumCarrygenerator File: C:/Users/Adit/Desktop/vhdl_project/New/SumCarryGenerator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file orgate.vhd
+    Info (12022): Found design unit 1: orGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd Line: 11
+    Info (12023): Found entity 1: orGate File: C:/Users/Adit/Desktop/vhdl_project/New/orGate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file notgate.vhd
+    Info (12022): Found design unit 1: notGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd Line: 11
+    Info (12023): Found entity 1: notGate File: C:/Users/Adit/Desktop/vhdl_project/New/notGate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file my_xor.vhd
+    Info (12022): Found design unit 1: MY_XOR-behavioral File: C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd Line: 7
+    Info (12023): Found entity 1: MY_XOR File: C:/Users/Adit/Desktop/vhdl_project/New/MY_XOR.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file my_nand.vhd
+    Info (12022): Found design unit 1: MY_NAND-behavioral File: C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd Line: 7
+    Info (12023): Found entity 1: MY_NAND File: C:/Users/Adit/Desktop/vhdl_project/New/MY_NAND.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file mux_vec.vhd
+    Info (12022): Found design unit 1: MUX_vec-Struct File: C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd Line: 10
+    Info (12023): Found entity 1: MUX_vec File: C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2.vhd
+    Info (12022): Found design unit 1: MUX_2-Struct File: C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd Line: 10
+    Info (12023): Found entity 1: MUX_2 File: C:/Users/Adit/Desktop/vhdl_project/New/MUX_2.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file koggestonefastadder.vhd
+    Info (12022): Found design unit 1: KoggeStoneFastAdder-Structural File: C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd Line: 12
+    Info (12023): Found entity 1: KoggeStoneFastAdder File: C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file gp_generator.vhd
+    Info (12022): Found design unit 1: GP_Generator-Structural File: C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd Line: 11
+    Info (12023): Found entity 1: GP_Generator File: C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file gpcell.vhd
+    Info (12022): Found design unit 1: GPcell-Structural File: C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd Line: 11
+    Info (12023): Found entity 1: GPcell File: C:/Users/Adit/Desktop/vhdl_project/New/GPcell.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file andgate.vhd
+    Info (12022): Found design unit 1: andGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd Line: 11
+    Info (12023): Found entity 1: andGate File: C:/Users/Adit/Desktop/vhdl_project/New/andGate.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-Struct File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 15
+    Info (12023): Found entity 1: ALU File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (12125): Using design file koggestonefastadder.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: KoggeStoneFastAdder-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 12
-    Info (12023): Found entity 1: KoggeStoneFastAdder File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 5
-Info (12128): Elaborating entity "KoggeStoneFastAdder" for hierarchy "KoggeStoneFastAdder:U0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 59
-Warning (12125): Using design file gp_generator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: GP_Generator-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 11
-    Info (12023): Found entity 1: GP_Generator File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 5
-Info (12128): Elaborating entity "GP_Generator" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 62
-Warning (12125): Using design file andgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: andGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd Line: 11
-    Info (12023): Found entity 1: andGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/andgate.vhd Line: 5
-Info (12128): Elaborating entity "andGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|andGate:G" File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 28
-Warning (12125): Using design file xorgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: XORGate-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 11
-    Info (12023): Found entity 1: XORGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 5
-Info (12128): Elaborating entity "XORGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P" File: C:/Users/Adit/Desktop/vhdl_project/ALU/gp_generator.vhd Line: 29
-Warning (12125): Using design file notgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: notGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd Line: 11
-    Info (12023): Found entity 1: notGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/notgate.vhd Line: 5
-Info (12128): Elaborating entity "notGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|notGate:I0_bar" File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 37
-Warning (12125): Using design file orgate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: orGate-Behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd Line: 11
-    Info (12023): Found entity 1: orGate File: C:/Users/Adit/Desktop/vhdl_project/ALU/orgate.vhd Line: 5
-Info (12128): Elaborating entity "orGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|orGate:Output_xor" File: C:/Users/Adit/Desktop/vhdl_project/ALU/xorgate.vhd Line: 43
-Warning (12125): Using design file gpcell.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: GPcell-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd Line: 11
-    Info (12023): Found entity 1: GPcell File: C:/Users/Adit/Desktop/vhdl_project/ALU/gpcell.vhd Line: 5
-Info (12128): Elaborating entity "GPcell" for hierarchy "KoggeStoneFastAdder:U0|GPcell:GP_1_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 82
-Warning (12125): Using design file sumcarrygenerator.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: SumCarryGenerator-Structural File: C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd Line: 11
-    Info (12023): Found entity 1: SumCarrygenerator File: C:/Users/Adit/Desktop/vhdl_project/ALU/sumcarrygenerator.vhd Line: 5
-Info (12128): Elaborating entity "SumCarrygenerator" for hierarchy "KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_0" File: C:/Users/Adit/Desktop/vhdl_project/ALU/koggestonefastadder.vhd Line: 141
-Warning (12125): Using design file my_nand.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: MY_NAND-behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd Line: 7
-    Info (12023): Found entity 1: MY_NAND File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_nand.vhd Line: 1
-Info (12128): Elaborating entity "MY_NAND" for hierarchy "MY_NAND:U1" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 60
-Warning (12125): Using design file my_xor.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: MY_XOR-behavioral File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd Line: 7
-    Info (12023): Found entity 1: MY_XOR File: C:/Users/Adit/Desktop/vhdl_project/ALU/my_xor.vhd Line: 1
-Info (12128): Elaborating entity "MY_XOR" for hierarchy "MY_XOR:U2" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 61
-Info (12128): Elaborating entity "MUX_vec" for hierarchy "MUX_vec:U3" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 62
-Warning (12125): Using design file mux_2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: MUX_2-Struct File: C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd Line: 10
-    Info (12023): Found entity 1: MUX_2 File: C:/Users/Adit/Desktop/vhdl_project/ALU/mux_2.vhd Line: 1
-Info (12128): Elaborating entity "MUX_2" for hierarchy "MUX_vec:U3|MUX_2:\GEN_MUX:0:U" File: C:/Users/Adit/Desktop/vhdl_project/ALU/MUX_vec.vhd Line: 20
-Info (12128): Elaborating entity "Z_check" for hierarchy "Z_check:U6" File: C:/Users/Adit/Desktop/vhdl_project/ALU/ALU.vhd Line: 65
+Info (12128): Elaborating entity "KoggeStoneFastAdder" for hierarchy "KoggeStoneFastAdder:U0" File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 59
+Info (12128): Elaborating entity "GP_Generator" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0" File: C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd Line: 62
+Info (12128): Elaborating entity "andGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|andGate:G" File: C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd Line: 28
+Info (12128): Elaborating entity "XORGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P" File: C:/Users/Adit/Desktop/vhdl_project/New/GP_Generator.vhd Line: 29
+Info (12128): Elaborating entity "notGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|notGate:I0_bar" File: C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd Line: 37
+Info (12128): Elaborating entity "orGate" for hierarchy "KoggeStoneFastAdder:U0|GP_Generator:GP_0_0|XORGate:P|orGate:Output_xor" File: C:/Users/Adit/Desktop/vhdl_project/New/XORgate.vhd Line: 43
+Info (12128): Elaborating entity "GPcell" for hierarchy "KoggeStoneFastAdder:U0|GPcell:GP_1_0" File: C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd Line: 82
+Info (12128): Elaborating entity "SumCarrygenerator" for hierarchy "KoggeStoneFastAdder:U0|SumCarrygenerator:sum_carry_0" File: C:/Users/Adit/Desktop/vhdl_project/New/KoggeStoneFastAdder.vhd Line: 141
+Info (12128): Elaborating entity "MY_NAND" for hierarchy "MY_NAND:U1" File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 60
+Info (12128): Elaborating entity "MY_XOR" for hierarchy "MY_XOR:U2" File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 61
+Info (12128): Elaborating entity "MUX_vec" for hierarchy "MUX_vec:U3" File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 62
+Info (12128): Elaborating entity "MUX_2" for hierarchy "MUX_vec:U3|MUX_2:\GEN_MUX:0:U" File: C:/Users/Adit/Desktop/vhdl_project/New/MUX_vec.vhd Line: 20
+Info (12128): Elaborating entity "Z_check" for hierarchy "Z_check:U6" File: C:/Users/Adit/Desktop/vhdl_project/New/ALU.vhd Line: 65
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -470,10 +470,10 @@ Info (21057): Implemented 172 device resources after synthesis - the final resou
     Info (21058): Implemented 34 input pins
     Info (21059): Implemented 18 output pins
     Info (21061): Implemented 120 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Thu Dec 03 20:06:56 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Fri Dec 04 14:53:35 2020
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:00:47
 
 
